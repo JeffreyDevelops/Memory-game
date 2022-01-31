@@ -1,0 +1,25 @@
+/* FONT */
+@font-face {
+    font-family: 'Atkinson Hyperlegible', sans-serif; 
+    src: url(../fonts/AtkinsonHyperlegible-Regular.ttf);
+}
+
+body {
+    background-color: #152938;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Atkinson Hyperlegible', sans-serif; 
+}
+
+/* === GENERAL === */
+
+
+
+/* === GAME SETUP === */
+
+.header_text {
+    color: #FFF;
+    font-weight: bold;
+}
