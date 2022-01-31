@@ -10,16 +10,68 @@ body {
     margin: 0;
     border: 0;
     box-sizing: border-box;
+    font-weight: 18px;
     font-family: 'Atkinson Hyperlegible', sans-serif; 
 }
 
 /* === GENERAL === */
 
+.flex-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 8rem;
+}
 
+.btn {
+    background-color: #BCCED9;
+    color: #FFF;
+    font-weight: bold;
+    border: none;
+    border-radius: 2rem;
+    padding: .8rem 0 .8rem 0;
+    width: 8.5rem;
+}
 
 /* === GAME SETUP === */
 
 .header_text {
     color: #FFF;
+    font-size: 32px;
     font-weight: bold;
+    margin-bottom: 4rem;
+    align-self: center;
+}
+
+.menu-bg {
+    background-color: #F2F2F2;
+    width: 90%;
+    height: 25rem;
+    align-self: center;
+    border-radius: .5rem;
+}
+
+
+#select-theme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+
+#select-theme > span {
+    align-self: center;
+    position: relative;
+    right: 6.2rem;
+    margin-bottom: .7rem;
+    color: #7191A5;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.menu-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: .6rem;
 }
