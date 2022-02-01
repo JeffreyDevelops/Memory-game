@@ -33,6 +33,16 @@ body {
     width: 8.5rem;
 }
 
+.btn-2 {
+    background-color: #BCCED9;
+    color: #FFF;
+    font-weight: bold;
+    border: none;
+    border-radius: 2rem;
+    padding: .8rem 0 .8rem 0;
+    width: 4rem;
+}
+
 /* === GAME SETUP === */
 
 .header_text {
@@ -51,7 +61,7 @@ body {
     border-radius: .5rem;
 }
 
-
+/* SELECT THEME */
 #select-theme {
     display: flex;
     flex-direction: column;
@@ -75,3 +85,23 @@ body {
     flex-direction: row;
     gap: .6rem;
 }
+
+/* NUMBERS OF PLAYERS */
+#numbers-of-players {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+
+#numbers-of-players > span {
+    align-self: center;
+    position: relative;
+    right: 5rem;
+    margin-bottom: .7rem;
+    color: #7191A5;
+    font-weight: bold;
+    font-size: 14px;
+}
+
