@@ -43,6 +43,17 @@ body {
     width: 4rem;
 }
 
+.start-btn {
+    background-color: #FDA214;
+    color: #FFF;
+    font-weight: bold;
+    border: none;
+    font-size: 15px;
+    border-radius: 2rem;
+    padding: 1rem 0 1rem 0;
+    width: 18rem;
+}
+
 /* === GAME SETUP === */
 
 .header_text {
@@ -116,6 +127,26 @@ body {
 
 
 #grid-system > span {
+    align-self: center;
+    position: relative;
+    right: 7rem;
+    margin-bottom: .7rem;
+    color: #7191A5;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* START GAME */
+
+#start {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+
+#start > span {
     align-self: center;
     position: relative;
     right: 7rem;
