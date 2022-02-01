@@ -68,7 +68,7 @@ body {
     background-color: #F2F2F2;
     width: 90%;
     height: 25rem;
-    max-width: 400px;
+    max-width: 350px;
     align-self: center;
     border-radius: .5rem;
 }
@@ -283,4 +283,87 @@ body {
     font-weight: bold;
     font-size: 14px;
 }
+}
+
+@media (min-width: 1440px) {
+    .menu-bg {
+        background-color: #F2F2F2;
+        width: 90%;
+        max-width: 500px;
+        height: 25rem;
+        align-self: center;
+        border-radius: .5rem;
+    }
+
+    .btn {
+        background-color: #BCCED9;
+        color: #FFF;
+        font-weight: bold;
+        border: none;
+        border-radius: 2rem;
+        padding: .6rem 0 .6rem 0;
+        width: 13rem;
+    }
+    
+    .btn-2 {
+        background-color: #BCCED9;
+        color: #FFF;
+        font-weight: bold;
+        border: none;
+        border-radius: 2rem;
+        padding: .6rem 0 .6rem 0;
+        width: 6.2rem;
+    }
+    
+    .start-btn {
+        background-color: #FDA214;
+        color: #FFF;
+        font-weight: bold;
+        border: none;
+        font-size: 15px;
+        border-radius: 2rem;
+        padding: .8rem 0 .8rem 0;
+        width: 26.8rem;
+    }
+
+    #select-theme > span {
+        align-self: center;
+        position: relative;
+        right: 11rem;
+        margin-bottom: .7rem;
+        color: #7191A5;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    #numbers-of-players > span {
+        align-self: center;
+        position: relative;
+        right: 9.5rem;
+        margin-bottom: .7rem;
+        color: #7191A5;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    #grid-system > span {
+        align-self: center;
+        position: relative;
+        right: 11.5rem;
+        margin-bottom: .7rem;
+        color: #7191A5;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    #start > span {
+        align-self: center;
+        position: relative;
+        right: 7rem;
+        margin-bottom: .7rem;
+        color: #7191A5;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
 }
