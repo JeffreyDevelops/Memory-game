@@ -68,6 +68,7 @@ body {
     background-color: #F2F2F2;
     width: 90%;
     height: 25rem;
+    max-width: 400px;
     align-self: center;
     border-radius: .5rem;
 }
@@ -154,4 +155,17 @@ body {
     color: #7191A5;
     font-weight: bold;
     font-size: 14px;
+}
+
+/* === MEDIA QUERIES === */
+
+@media (min-width: 768px) {
+    .menu-bg {
+        background-color: #F2F2F2;
+        width: 90%;
+        max-width: 500px;
+        height: 25rem;
+        align-self: center;
+        border-radius: .5rem;
+    }
 }
