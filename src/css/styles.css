@@ -33,6 +33,11 @@ body {
     width: 8.5rem;
 }
 
+.btn:hover {
+    background-color: #6395B8;
+    cursor: pointer;
+}
+
 .btn-2 {
     background-color: #BCCED9;
     color: #FFF;
@@ -41,6 +46,11 @@ body {
     border-radius: 2rem;
     padding: .8rem 0 .8rem 0;
     width: 4rem;
+}
+
+.btn-2:hover {
+    background-color: #6395B8;
+    cursor: pointer;
 }
 
 .start-btn {
@@ -52,6 +62,11 @@ body {
     border-radius: 2rem;
     padding: 1rem 0 1rem 0;
     width: 18rem;
+}
+
+.start-btn:hover {
+    opacity: .5;
+    cursor: pointer;
 }
 
 /* === GAME SETUP === */
