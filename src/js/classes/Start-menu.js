@@ -2,6 +2,7 @@ export default class Startmenu {
 
 constructor () {
     this._html = this._html_generieren();
+    this._theme = this._choose_theme();
 }
 
 
@@ -15,7 +16,7 @@ _html_generieren() {
         <!-- Select Theme -->
         <span>Select Theme</span>
         <div class="menu-buttons">
-        <button class="btn">Numbers</button>
+        <button id="theme-numbers" class="btn">Numbers</button>
         <button class="btn">Icons</button>
       </div>
       </div>
@@ -50,8 +51,26 @@ return startMenu;
 
 }
 
+_choose_theme() {
+  let theme_numbers = this._html.querySelector("#theme-numbers");
+  let theme_icons = this._html.querySelector("button:nth-of-type(2)");
+  this._html.querySelector("#game-start");
+  this._html.addEventListener("click", e =>{
+    if (e.target.innerHTML === "Icons") {
+      theme_numbers.removeAttribute("id");
+      theme_icons.setAttribute("id", "theme-icons");
+      
+    } else {
+      theme_numbers.setAttribute("id", "theme-numbers");
+      theme_icons.removeAttribute("id", "theme-icons");
+    }
+    
+  }); 
+}
+
 
 anzeigen() {
+    this._choose_theme();
     let body = document.querySelector("body");
     if (body !== null) {
         body.insertAdjacentElement("afterbegin", this._html);

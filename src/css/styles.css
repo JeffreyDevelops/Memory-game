@@ -69,6 +69,14 @@ body {
     cursor: pointer;
 }
 
+#theme-numbers {
+    background-color: #152938;
+}
+
+#theme-icons {
+    background-color: #152938;
+}
+
 /* === GAME SETUP === */
 
 .header_text {
