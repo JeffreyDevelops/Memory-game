@@ -54,13 +54,13 @@ return startMenu;
 _choose_theme() {
   let theme_numbers = this._html.querySelector("#theme-numbers");
   let theme_icons = this._html.querySelector("button:nth-of-type(2)");
-  this._html.querySelector("#game-start");
+  this._html.querySelector(".menu-buttons");
   this._html.addEventListener("click", e =>{
     if (e.target.innerHTML === "Icons") {
       theme_numbers.removeAttribute("id");
       theme_icons.setAttribute("id", "theme-icons");
       
-    } else {
+    } else if(e.target.innerHTML === "Numbers") {
       theme_numbers.setAttribute("id", "theme-numbers");
       theme_icons.removeAttribute("id", "theme-icons");
     }
@@ -70,7 +70,6 @@ _choose_theme() {
 
 
 anzeigen() {
-    this._choose_theme();
     let body = document.querySelector("body");
     if (body !== null) {
         body.insertAdjacentElement("afterbegin", this._html);
