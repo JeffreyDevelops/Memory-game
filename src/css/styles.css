@@ -69,11 +69,30 @@ body {
     cursor: pointer;
 }
 
+/* === THEMES === */
 #theme-numbers {
     background-color: #152938;
 }
 
 #theme-icons {
+    background-color: #152938;
+}
+
+/* === PLAYERS OF NUMBERS === */
+
+#players_1 {
+    background-color: #152938;
+}
+
+#players_2 {
+    background-color: #152938;
+}
+
+#players_3 {
+    background-color: #152938;
+}
+
+#players_4 {
     background-color: #152938;
 }
 

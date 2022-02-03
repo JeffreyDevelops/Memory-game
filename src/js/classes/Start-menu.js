@@ -24,7 +24,7 @@ _html_generieren() {
         <!-- Numbers of Players -->
         <span>Numbers of Players</span>
         <div class="menu-buttons">
-        <button class="btn-2">1</button>
+        <button id="players_1" class="btn-2">1</button>
         <button class="btn-2">2</button>
         <button class="btn-2">3</button>
         <button class="btn-2">4</button>
@@ -54,19 +54,27 @@ return startMenu;
 _choose_theme() {
   let theme_numbers = this._html.querySelector("#theme-numbers");
   let theme_icons = this._html.querySelector("button:nth-of-type(2)");
-  this._html.querySelector(".menu-buttons");
-  this._html.addEventListener("click", e =>{
-    if (e.target.innerHTML === "Icons") {
+  this._html.addEventListener("click", theme => {
+    if (theme.target.innerHTML === "Icons") {
       theme_numbers.removeAttribute("id");
       theme_icons.setAttribute("id", "theme-icons");
       
-    } else if(e.target.innerHTML === "Numbers") {
+    } else if(theme.target.innerHTML === "Numbers") {
       theme_numbers.setAttribute("id", "theme-numbers");
       theme_icons.removeAttribute("id", "theme-icons");
     }
+
+    // this._choose_numbers_of_players();
     
   }); 
 }
+
+// _choose_numbers_of_players () {
+//   let numbers_players = this._html.querySelector("#players_1");
+//   this._html.querySelector(".btn-2");
+//         console.log("test");
+
+// }
 
 
 anzeigen() {
