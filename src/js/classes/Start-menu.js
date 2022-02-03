@@ -4,6 +4,7 @@ constructor () {
     this._html = this._html_generieren();
     this._theme = this._choose_theme();
     this._numbers_players = this._choose_numbers_of_players();
+    this._grid_size = this._choose_grid_size();
 }
 
 
@@ -35,7 +36,7 @@ _html_generieren() {
         <!-- Grid Size -->
         <span>Grid Size</span>
         <div id="menu-grid-size" class="menu-buttons">
-        <button class="btn">4x4</button>
+        <button id="grid-size-4x4" class="btn">4x4</button>
         <button class="btn">6x6</button>
       </div>
       </div>
@@ -98,6 +99,22 @@ _choose_theme() {
     }
   
   });
+}
+
+_choose_grid_size() {
+  let fourxfour = this._html.querySelector("#menu-grid-size button:nth-of-type(1)");
+  let sixxsix = this._html.querySelector("#menu-grid-size button:nth-of-type(2)");
+  this._html.querySelector("#menu-grid-size").addEventListener("click", grid => {
+
+    if (grid.target.innerHTML === "4x4") {
+      fourxfour.setAttribute("id", "grid-size-4x4");
+      sixxsix.removeAttribute("id", "grid-size-6x6");
+      
+    } else if(grid.target.innerHTML === "6x6") {
+      fourxfour.removeAttribute("id");
+      sixxsix.setAttribute("id", "grid-size-6x6");
+    }
+  }); 
 }
 
 
