@@ -4,4 +4,5 @@ let memory = new Startmenu();
 
 memory._anzeigen_menu();
 
+
 export default memory;
