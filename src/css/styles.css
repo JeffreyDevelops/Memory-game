@@ -267,6 +267,51 @@ body {
     color: #FFF;
 }
 
+/* === DATA === */
+
+#data {
+    margin-top: 15rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    
+}
+
+.time {
+    background-color: #BCCED9;
+    padding: 1.5rem 4rem 1.5rem 4rem;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.moves {
+    background-color: #BCCED9;
+    padding: 1.5rem 4rem 1.5rem 4rem;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.time span {
+    font-size: 12px;
+    font-weight: bold;
+    color: #7191A5;
+    position: relative;
+    bottom: .8rem;
+ }
+
+.moves span {
+   font-size: 12px;
+   font-weight: bold;
+   color: #7191A5;
+   position: relative;
+    bottom: .8rem;
+}
+
+
+
 
 /* === MEDIA QUERIES === */
 
