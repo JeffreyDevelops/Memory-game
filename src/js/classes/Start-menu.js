@@ -122,7 +122,6 @@ _start_game() {
   let start_button = this._html.querySelector(".start-btn");
   start_button.addEventListener("click", start => {
   this._html.remove();
-  this._anzeigen_menu();
   });
 }
 
@@ -133,6 +132,13 @@ _anzeigen_menu() {
         body.insertAdjacentElement("afterbegin", this._html);
     }
     
+}
+
+_anzeigen_numbers_1p_4x4() {
+  let body = document.querySelector("body");
+    if (body !== null) {
+        body.insertAdjacentElement("afterbegin", this._html);
+    }
 }
 
 
