@@ -1,14 +1,15 @@
 export default class Startmenu {
 
 constructor () {
-    this._html = this._html_generieren();
+    this._html = this._html_generieren_menu();
     this._theme = this._choose_theme();
     this._numbers_players = this._choose_numbers_of_players();
     this._grid_size = this._choose_grid_size();
+    this._start_game = this._start_game();
 }
 
 
-_html_generieren() {
+_html_generieren_menu() {
     let startMenu = document.createElement("section");
     startMenu.setAttribute("id", "game-start");
     startMenu.innerHTML = `<div class="flex-container">
@@ -117,14 +118,23 @@ _choose_grid_size() {
   }); 
 }
 
+_start_game() {
+  let start_button = this._html.querySelector(".start-btn");
+  start_button.addEventListener("click", start => {
+  this._html.remove();
+  this._anzeigen_menu();
+  });
+}
 
-anzeigen() {
+
+_anzeigen_menu() {
     let body = document.querySelector("body");
     if (body !== null) {
         body.insertAdjacentElement("afterbegin", this._html);
     }
     
 }
+
 
 
 }

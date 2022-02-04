@@ -2,6 +2,6 @@ import Startmenu from "./classes/Start-menu.js";
 
 let memory = new Startmenu();
 
-memory.anzeigen();
+memory._anzeigen_menu();
 
 export default memory;
