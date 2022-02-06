@@ -123,10 +123,10 @@ _start_game() {
   let attack_body = document.querySelector("body");
   let start_button = this._html.querySelector(".start-btn");
   start_button.addEventListener("click", start => {
-  this._html.remove();
-  attack_body.style.backgroundColor = "#FFF";
-  // let numbers_onep_4x4 = new Numbers_1p_4x4();
-  // numbers_onep_4x4.anzeigen_numbers_1p_4x4();
+  setTimeout(function() {
+    location.href = "/solo_1_4x4";
+  }, 500);
+  
   });
 }
 
