@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+  res.render("numbers_1p_4x4", {title: "Numbers-Solo-4x4"});
 });
 
 module.exports = router;

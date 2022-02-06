@@ -2,7 +2,6 @@ export default class Startmenu {
 
 constructor () {
     this._html = this._html_generieren_menu();
-    this._html_numbers_solo_4x4 = this._html_generieren_numbers_1p_4x4();
     this._theme = this._choose_theme();
     this._numbers_players = this._choose_numbers_of_players();
     this._grid_size = this._choose_grid_size();
@@ -55,52 +54,6 @@ return startMenu;
 
 }
 
-_html_generieren_numbers_1p_4x4() {
-  let numbers_1p_4x4 = document.createElement("section");
-  numbers_1p_4x4.setAttribute("id", "game-numbers-solo-4x4");
-  numbers_1p_4x4.innerHTML = `    <nav id="game-nav">
-  <div class="game-header-text">
-    <span>memory</span>
-  </div>
-  <div class="game-menu-button">
-    <button>Menu</button>
-  </div>
-</nav>
-
-<div class="game-flex">
-<div id="game-grid-number-solo-4x4">
- <div class="game-flex"><span></span></div>
- <div class="game-flex"><span></span></div>
- <div class="game-flex"><span></span></div>
- <div class="game-flex"><span></span></div>
- <div class="game-flex"><span></span></div>
- <div class="game-flex"><span></span></div>
- <div class="game-flex"><span></span></div>
- <div class="game-flex"><span></span></div>
- <div class="game-flex"><span></span></div>
- <div class="game-flex"><span></span></div>
- <div class="game-flex"><span></span></div>
- <div class="game-flex"><span></span></div>
- <div class="game-flex"><span></span></div>
- <div class="game-flex"><span></span></div>
- <div class="game-flex"><span></span></div>
- <div class="game-flex"><span></span></div>
-</div>
-</div>
-
-<div id="data">
-  <div class="time">
-    <span>Time</span>
-
-  </div>
-  <div class="moves">
-    <span>Moves</span>
-    
-  </div>
-</div>`
-
-return numbers_1p_4x4;
-}
 
 _choose_theme() {
   let theme_numbers = this._html.querySelector("#theme-numbers");
@@ -172,7 +125,8 @@ _start_game() {
   start_button.addEventListener("click", start => {
   this._html.remove();
   attack_body.style.backgroundColor = "#FFF";
-  this._anzeigen_numbers_1p_4x4();
+  // let numbers_onep_4x4 = new Numbers_1p_4x4();
+  // numbers_onep_4x4.anzeigen_numbers_1p_4x4();
   });
 }
 
@@ -183,13 +137,6 @@ _anzeigen_menu() {
         body.insertAdjacentElement("afterbegin", this._html);
     }
     
-}
-
-_anzeigen_numbers_1p_4x4() {
-  let body = document.querySelector("body");
-    if (body !== null) {
-        body.insertAdjacentElement("afterbegin", this._html_numbers_solo_4x4);
-    }
 }
 
 
