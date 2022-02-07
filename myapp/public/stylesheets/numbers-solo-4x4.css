@@ -37,6 +37,28 @@ body {
     color: #FFF;
 }
 
+#restart-button {
+  display: none;
+}
+
+#new-game {
+        position: relative;
+        left: 8rem;
+        border: none;
+        padding: .6rem 1.3rem .6rem 1.3rem;
+        border-radius: 1rem;
+        background-color: #BCCED9;
+        color: #152938;
+        font-weight: bold;
+        display: none;
+}
+
+.game-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .game-flex {
     display: flex;
     justify-content: center;
@@ -60,7 +82,7 @@ body {
     padding-right: 30px;
     border: none;
     font-weight: bold;
-    background-color: #152938;
+    background-color: #304859;
 }
 
 #game-grid-number-solo-4x4 div span {
@@ -79,7 +101,7 @@ body {
 }
 
 .time {
-    background-color: #BCCED9;
+    background-color: #F2F2F2;
     padding: 1.5rem 4rem 1.5rem 4rem;
     border-radius: .5rem;
     display: flex;
@@ -87,7 +109,7 @@ body {
 }
 
 .moves {
-    background-color: #BCCED9;
+    background-color: #F2F2F2;
     padding: 1.5rem 4rem 1.5rem 4rem;
     border-radius: .5rem;
     display: flex;
@@ -109,4 +131,101 @@ body {
    color: #7191A5;
    position: relative;
     bottom: .8rem;
+}
+
+/* === MEDIA QUERIES === */
+
+@media (min-width: 768px) {
+    /* === GAME-NUMBERS-SOLO-4x4 === */
+    .game-header-text span {
+        position: relative;
+        right: 12rem;
+        font-size: 25px;
+        font-weight: bold;
+        color: #152938;
+    }
+
+    .game-menu-button #menu{
+        display: none;
+    }
+
+    #restart-button {
+        position: relative;
+        left: 11.5rem;
+        border: none;
+        padding: .6rem 1rem .6rem 1rem;
+        border-radius: 1rem;
+        background-color: #FDA214;
+        color: #FFF;
+        width: 110px;
+        display: inline-block;
+        font-weight: bold;
+    }
+
+    #new-game {
+        position: relative;
+        left: 12rem;
+        border: none;
+        padding: .6rem 1rem .6rem 1rem;
+        border-radius: 1rem;
+        background-color: #BCCED9;
+        color: #152938;
+        font-weight: bold;
+        display: inline-block;
+        width: 110px;  
+}
+
+#game-grid-number-solo-4x4 {
+    margin-top: 10rem;
+    display: grid;
+    grid-template-rows: 75px 75px 75px 75px;
+    grid-template-columns: 75px 75px 75px 75px;
+    gap: 1rem;
+}
+
+/* === DATA === */
+
+#data {
+    margin-top: 13.5rem;
+    display: flex;
+    gap: 1.3rem;
+    justify-content: center;
+    
+}
+
+.time {
+    background-color: #F2F2F2;
+    width: 100px;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.moves {
+    background-color: #F2F2F2;
+    width: 100px;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+
+.time span {
+    font-size: 12px;
+    font-weight: bold;
+    color: #7191A5;
+    position: none;
+    bottom: 0;
+ }
+
+.moves span {
+   font-size: 12px;
+   font-weight: bold;
+   color: #7191A5;
+   position: none;
+    bottom: 0;
+}
+
 }

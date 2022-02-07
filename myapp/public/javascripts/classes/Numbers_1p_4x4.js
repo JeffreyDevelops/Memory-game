@@ -12,7 +12,9 @@ export default class Numbers_1p_4x4 {
           <span>memory</span>
         </div>
         <div class="game-menu-button">
-          <button>Menu</button>
+          <button id="restart-button">Restart</button>
+          <button id="menu">Menu</button>
+          <button id="new-game">New Game</button>
         </div>
       </nav>
       
