@@ -229,3 +229,61 @@ body {
 }
 
 }
+
+@media (min-width: 1920px) {
+    #game-grid-number-solo-4x4 {
+        margin-top: 13rem;
+        display: grid;
+        grid-template-rows: 75px 75px 75px 75px;
+        grid-template-columns: 75px 75px 75px 75px;
+        gap: 2rem;
+    }
+    /* === DATA === */
+
+#data {
+    margin-top: 13.5rem;
+    display: flex;
+    gap: 1.3rem;
+    justify-content: center;
+    
+}
+
+.time {
+    background-color: #F2F2F2;
+    width: 100px;
+    position: relative;
+    bottom: 1rem;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.moves {
+    background-color: #F2F2F2;
+    position: relative;
+    bottom: 1rem;
+    width: 100px;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+
+.time span {
+    font-size: 12px;
+    font-weight: bold;
+    color: #7191A5;
+    position: none;
+    bottom: 0;
+ }
+
+.moves span {
+   font-size: 12px;
+   font-weight: bold;
+   color: #7191A5;
+   position: none;
+    bottom: 0;
+}
+}
