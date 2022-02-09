@@ -130,16 +130,19 @@ _start_game() {
   let theme_numbers = this._html.querySelector("#menu-themes > button:nth-of-type(1)");
   let theme_icon = this._html.querySelector("#menu-themes > button:nth-of-type(2)");
 
+  // Grid size check
+  let fourxfour = this._html.querySelector("#menu-grid-size > button:nth-of-type(1)");
+  let sixxsix = this._html.querySelector("#menu-grid-size > button:nth-of-type(1)");
 
   let start_button = this._html.querySelector(".start-btn");
   start_button.addEventListener("click", start => {
-    if (theme_numbers.hasAttribute("id") && p_1.hasAttribute("id")) {
+    if (theme_numbers.hasAttribute("id") && p_1.hasAttribute("id") && fourxfour.hasAttribute("id")) {
       setTimeout(function() {
         location.href = "/solo_1_4x4";
       }, 500);
 
     } else {
-      console.log("Please only choose 1 Player and theme Numbers, because the other selections are in the making!");
+      console.log("Please only choose 1 Player and theme Numbers / 4x4 Grid, because the other selections are in the making!");
     }
   
   });
