@@ -5,7 +5,6 @@ constructor () {
     this._theme = this._choose_theme();
     this._numbers_players = this._choose_numbers_of_players();
     this._grid_size = this._choose_grid_size();
-    this._check = this._check_menu();
     this._start_game = this._start_game();
 }
 
@@ -120,26 +119,27 @@ _choose_grid_size() {
   }); 
 }
 
-_check_menu() {
-
- 
-
-
-}
-
 _start_game() {
-  let test2 = this._html.querySelector("#theme-numbers");
-  let test = this._html.querySelector("#theme-icon");
+  // Player amount check 
+  let p_1 = this._html.querySelector("#menu-numbers-of-players > button:nth-of-type(1)");
+  let p_2 = this._html.querySelector("#menu-numbers-of-players > button:nth-of-type(2)");
+  let p_3 = this._html.querySelector("#menu-numbers-of-players > button:nth-of-type(3)");
+  let p_4 = this._html.querySelector("#menu-numbers-of-players > button:nth-of-type(4)");
+
+  // Theme selection check
   let theme_numbers = this._html.querySelector("#menu-themes > button:nth-of-type(1)");
-  let theme_icon = this._html.querySelector(".menu-buttons:nth-of-type(2)");
+  let theme_icon = this._html.querySelector("#menu-themes > button:nth-of-type(2)");
+
+
   let start_button = this._html.querySelector(".start-btn");
   start_button.addEventListener("click", start => {
-    if (theme_numbers.hasAttribute("id")) {
+    if (theme_numbers.hasAttribute("id") && p_1.hasAttribute("id")) {
       setTimeout(function() {
         location.href = "/solo_1_4x4";
       }, 500);
+
     } else {
-      console.log("IT DOESN'T CONTAIN THE ID ANYMORE");
+      console.log("Please only choose 1 Player and theme Numbers, because the other selections are in the making!");
     }
   
   });
