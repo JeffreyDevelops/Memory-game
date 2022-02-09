@@ -5,6 +5,7 @@ constructor () {
     this._theme = this._choose_theme();
     this._numbers_players = this._choose_numbers_of_players();
     this._grid_size = this._choose_grid_size();
+    this._check = this._check_menu();
     this._start_game = this._start_game();
 }
 
@@ -119,13 +120,27 @@ _choose_grid_size() {
   }); 
 }
 
+_check_menu() {
+
+ 
+
+
+}
+
 _start_game() {
-  let attack_body = document.querySelector("body");
+  let test2 = this._html.querySelector("#theme-numbers");
+  let test = this._html.querySelector("#theme-icon");
+  let theme_numbers = this._html.querySelector("#menu-themes > button:nth-of-type(1)");
+  let theme_icon = this._html.querySelector(".menu-buttons:nth-of-type(2)");
   let start_button = this._html.querySelector(".start-btn");
   start_button.addEventListener("click", start => {
-  setTimeout(function() {
-    location.href = "/solo_1_4x4";
-  }, 500);
+    if (theme_numbers.hasAttribute("id")) {
+      setTimeout(function() {
+        location.href = "/solo_1_4x4";
+      }, 500);
+    } else {
+      console.log("IT DOESN'T CONTAIN THE ID ANYMORE");
+    }
   
   });
 }
