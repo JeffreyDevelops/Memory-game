@@ -61,12 +61,25 @@ export default class Numbers_1p_4x4 {
         test.forEach(e => {
           e.style.display = "none";
       });
-    
-        let testing = this.html_numbers_solo_4x4.querySelector("#game-grid-number-solo-4x4 .game-flex:nth-of-type(3)");
-        let testing2 = this.html_numbers_solo_4x4.querySelectorAll("#game-grid-number-solo-4x4");
+        let one = this.html_numbers_solo_4x4.querySelector("#game-grid-number-solo-4x4 .game-flex:nth-of-type(1)");
+        let two = this.html_numbers_solo_4x4.querySelector("#game-grid-number-solo-4x4 .game-flex:nth-of-type(2)");
 
-        testing.addEventListener("click", e => {
         
+        let one_display = this.html_numbers_solo_4x4.querySelector("#game-grid-number-solo-4x4 .game-flex:nth-of-type(1) > span");
+        let two_display = this.html_numbers_solo_4x4.querySelector("#game-grid-number-solo-4x4 .game-flex:nth-of-type(2) > span");
+
+        one.addEventListener("click", e => {
+        
+          one_display.style.display = "block";
+
+          console.log(e);
+        
+        });
+
+        two.addEventListener("click", e => {
+        
+          two_display.style.display = "block";
+
           console.log(e);
         
         });
