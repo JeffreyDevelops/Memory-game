@@ -1,7 +1,10 @@
+
+
 export default class Numbers_1p_4x4 {
 
     constructor() {
         this.html_numbers_solo_4x4 = this.html_generieren_numbers_1p_4x4();
+        this.click_memory = this._click_memory();
     }
 
     html_generieren_numbers_1p_4x4() {
@@ -20,22 +23,22 @@ export default class Numbers_1p_4x4 {
       
       <div class="game-flex">
       <div id="game-grid-number-solo-4x4">
-       <div class="game-flex"><span></span></div>
-       <div class="game-flex"><span></span></div>
-       <div class="game-flex"><span></span></div>
-       <div class="game-flex"><span></span></div>
-       <div class="game-flex"><span></span></div>
-       <div class="game-flex"><span></span></div>
-       <div class="game-flex"><span></span></div>
-       <div class="game-flex"><span></span></div>
-       <div class="game-flex"><span></span></div>
-       <div class="game-flex"><span></span></div>
-       <div class="game-flex"><span></span></div>
-       <div class="game-flex"><span></span></div>
-       <div class="game-flex"><span></span></div>
-       <div class="game-flex"><span></span></div>
-       <div class="game-flex"><span></span></div>
-       <div class="game-flex"><span></span></div>
+       <div class="game-flex"><span>2</span></div>
+       <div class="game-flex"><span>3</span></div>
+       <div class="game-flex"><span>5</span></div>
+       <div class="game-flex"><span>4</span></div>
+       <div class="game-flex"><span>9</span></div>
+       <div class="game-flex"><span>5</span></div>
+       <div class="game-flex"><span>8</span></div>
+       <div class="game-flex"><span>7</span></div>
+       <div class="game-flex"><span>4</span></div>
+       <div class="game-flex"><span>8</span></div>
+       <div class="game-flex"><span>3</span></div>
+       <div class="game-flex"><span>6</span></div>
+       <div class="game-flex"><span>9</span></div>
+       <div class="game-flex"><span>2</span></div>
+       <div class="game-flex"><span>7</span></div>
+       <div class="game-flex"><span>6</span></div>
       </div>
       </div>
       
@@ -51,6 +54,24 @@ export default class Numbers_1p_4x4 {
       </div>`
       
       return numbers_1p_4x4;
+      }
+
+      _click_memory() {
+        let test = this.html_numbers_solo_4x4.querySelectorAll("#game-grid-number-solo-4x4 span");
+        test.forEach(e => {
+          e.style.display = "none";
+      });
+    
+        let testing = this.html_numbers_solo_4x4.querySelector("#game-grid-number-solo-4x4 .game-flex:nth-of-type(3)");
+        let testing2 = this.html_numbers_solo_4x4.querySelectorAll("#game-grid-number-solo-4x4");
+
+        testing.addEventListener("click", e => {
+        
+          console.log(e);
+        
+        });
+
+
       }
 
 
