@@ -91,7 +91,10 @@ body {
 #game-grid-number-solo-4x4 div span {
     font-size: 30px;
     color: #FFF;
-    
+}
+
+.hidden {
+    display: none;
 }
 
 /* === DATA === */
