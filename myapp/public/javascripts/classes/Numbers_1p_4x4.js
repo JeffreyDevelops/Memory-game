@@ -57,11 +57,8 @@ export default class Numbers_1p_4x4 {
       }
 
       _click_memory() {
-        let test = this.html_numbers_solo_4x4.querySelectorAll("#game-grid-number-solo-4x4 span");
-        let test1 = this.html_numbers_solo_4x4.querySelector("#game-grid-number-solo-4x4");
-        let test2 = this.html_numbers_solo_4x4.querySelectorAll("#game-grid-number-solo-4x4 .game-flex > span");
-
-        test1.addEventListener("click", e =>{
+        let card_target = this.html_numbers_solo_4x4.querySelector("#game-grid-number-solo-4x4");
+        card_target.addEventListener("click", e =>{
 
           if (e.target.classList.contains("game-flex")) {
              e.target.classList.toggle("flip");
