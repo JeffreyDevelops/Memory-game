@@ -65,6 +65,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-indent: -9999px; 
 }
 
 #game-grid-number-solo-4x4 {
@@ -88,14 +89,23 @@ body {
     cursor: pointer;
 }
 
-#game-grid-number-solo-4x4 div span {
-    font-size: 30px;
+@keyframes mymove {
+    from {transform: rotateY(0deg);}
+    to {transform: rotateY(360deg);}
+  }
+
+.flip {
+    position: relative;
+    background-color: #304859;
+    backface-visibility: visible;
+    animation:mymove 1s;
+    transition-delay: .5s;
+    text-indent: 1px!important;
+    font-size: 30px!important;
     color: #FFF;
 }
 
-.hidden {
-    display: none;
-}
+
 
 /* === DATA === */
 
