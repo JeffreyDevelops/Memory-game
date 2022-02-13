@@ -59,13 +59,39 @@ export default class Numbers_1p_4x4 {
       _click_memory() {
         let card_target = this.html_numbers_solo_4x4.querySelector("#game-grid-number-solo-4x4");
         card_target.addEventListener("click", e =>{
-
           if (e.target.classList.contains("game-flex")) {
-             e.target.classList.toggle("flip");
+          const click_card = e.target;
+          click_card.classList.add("flip");
+        } 
+
+           const flip_cards = this.html_numbers_solo_4x4.querySelectorAll(".flip");
+           const flip_cardss = this.html_numbers_solo_4x4.querySelector(".flip");
+           
+            if (flip_cards.length === 2) {
+              console.log(flip_cards);
+              if (flip_cards[0].innerText === flip_cards[1].innerText) {
+                
+                  flip_cards.forEach(e => {
+                   e.style.backgroundColor = "orange";
+                   });
             
-          } else {
-            console.log("It doesn't work G");
-          }
+              } else {
+                setTimeout(function() {
+                  flip_cards.forEach(e => {
+                   e.classList.remove("flip");
+                   });
+                }, 1500);
+                
+              }
+
+            } else {
+              
+              
+            }
+            
+            
+          
+          
         });
         
 
