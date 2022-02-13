@@ -23,21 +23,21 @@ export default class Numbers_1p_4x4 {
       
       <div class="game-flex">
       <div id="game-grid-number-solo-4x4">
+       <div class="game-flex">1</div>
        <div class="game-flex">2</div>
        <div class="game-flex">3</div>
        <div class="game-flex">4</div>
-       <div class="game-flex">5</div>
        <div class="game-flex">6</div>
+       <div class="game-flex">5</div>
        <div class="game-flex">7</div>
        <div class="game-flex">8</div>
-       <div class="game-flex">9</div>
-       <div class="game-flex">11</div>
-       <div class="game-flex">22</div>
-       <div class="game-flex">22</div>
-       <div class="game-flex">33</div>
-       <div class="game-flex">43</div>
-       <div class="game-flex">32</div>
+       <div class="game-flex">3</div>
+       <div class="game-flex">8</div>
+       <div class="game-flex">4</div>
+       <div class="game-flex">5</div>
+       <div class="game-flex">7</div>
        <div class="game-flex">1</div>
+       <div class="game-flex">6</div>
        <div class="game-flex">2</div>
       </div>
       </div>

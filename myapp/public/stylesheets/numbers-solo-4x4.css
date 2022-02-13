@@ -103,6 +103,7 @@ body {
     text-indent: 1px!important;
     font-size: 30px!important;
     color: #FFF;
+    pointer-events: none;
 }
 
 
