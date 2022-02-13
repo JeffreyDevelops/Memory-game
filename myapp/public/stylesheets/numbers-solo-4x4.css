@@ -94,7 +94,7 @@ body {
     to {transform: rotateY(360deg);}
   }
 
-.flip {
+.flipCard {
     position: relative;
     background-color: #304859;
     backface-visibility: visible;
