@@ -83,7 +83,7 @@ export default class Numbers_1p_4x4 {
                    e.classList.remove("flipCard");
                    e.classList.remove("flip");
                    });
-                }, 1500);
+                }, 1000);
                 
               }
 
