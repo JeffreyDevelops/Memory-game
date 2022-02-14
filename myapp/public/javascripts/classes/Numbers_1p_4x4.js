@@ -87,7 +87,7 @@ export default class Numbers_1p_4x4 {
                 
               }
 
-            } else if (flip_cards.length > 2) {
+            } else if (flip_cards.length > 3) {
                 flip_cards.forEach(e => {
                  e.classList.remove("flipCard");
                  e.classList.remove("flip");
