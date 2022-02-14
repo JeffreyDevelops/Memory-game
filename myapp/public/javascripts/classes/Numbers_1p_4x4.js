@@ -87,6 +87,14 @@ export default class Numbers_1p_4x4 {
                 
               }
 
+            } else if (flip_cards.length === 4) {
+              setTimeout(function() {
+                flip_cards.forEach(e => {
+                 e.classList.remove("flipCard");
+                 e.classList.remove("flip");
+                 });
+              }, 1000);
+              
             } 
             
   
