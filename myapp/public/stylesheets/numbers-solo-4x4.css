@@ -7,7 +7,12 @@ body {
     border: 0;
     box-sizing: border-box;
     font-weight: 18px;
-    font-family: 'Atkinson Hyperlegible', sans-serif; 
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;  
 }
 
 /* === GAME-NUMBERS-SOLO-4x4 === */
@@ -174,17 +179,17 @@ body {
     }
 
     #game-grid-number-solo-4x4 {
-        margin-top: 10rem;
+        margin-top: 5rem;
         display: grid;
         grid-template-rows: 65px 65px 65px 65px;
         grid-template-columns: 65px 65px 65px 65px;
-        gap: .5rem;
+        gap: .3rem;
     }
 
     #data {
-        margin-top: 11rem;
+        margin-top: 5rem;
         display: flex;
-        gap: 1rem;
+        gap: 1.5rem;
         justify-content: center;
         
     }
@@ -192,7 +197,7 @@ body {
     .time {
         background-color: #F2F2F2;
         padding: 1.5rem 3rem 1.5rem 3rem;
-        border-radius: .5rem;
+        border-radius: .3rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -201,7 +206,7 @@ body {
     .moves {
         background-color: #F2F2F2;
         padding: 1.5rem 3rem 1.5rem 3rem;
-        border-radius: .5rem;
+        border-radius: .3rem;
         display: flex;
         flex-direction: column;
     }
@@ -210,7 +215,7 @@ body {
 
 @media (min-width: 375px) {
     #game-grid-number-solo-4x4 {
-        margin-top: 10rem;
+        margin-top: 5rem;
         display: grid;
         grid-template-rows: 75px 75px 75px 75px;
         grid-template-columns: 75px 75px 75px 75px;
@@ -222,7 +227,7 @@ body {
     /* === GAME-NUMBERS-SOLO-4x4 === */
     .game-header-text span {
         position: relative;
-        right: 12rem;
+        right: 10rem;
         font-size: 25px;
         font-weight: bold;
         color: #152938;
@@ -234,7 +239,7 @@ body {
 
     #restart-button {
         position: relative;
-        left: 11.5rem;
+        left: 10rem;
         border: none;
         padding: .6rem 1rem .6rem 1rem;
         border-radius: 1rem;
@@ -247,7 +252,7 @@ body {
 
     #new-game {
         position: relative;
-        left: 12rem;
+        left: 10rem;
         border: none;
         padding: .6rem 1rem .6rem 1rem;
         border-radius: 1rem;
@@ -259,7 +264,7 @@ body {
 }
 
 #game-grid-number-solo-4x4 {
-    margin-top: 10rem;
+    margin-top: 8rem;
     display: grid;
     grid-template-rows: 75px 75px 75px 75px;
     grid-template-columns: 75px 75px 75px 75px;
@@ -269,7 +274,7 @@ body {
 /* === DATA === */
 
 #data {
-    margin-top: 13.5rem;
+    margin-top: 8rem;
     display: flex;
     gap: 1.3rem;
     justify-content: center;
@@ -315,7 +320,7 @@ body {
 
 @media (min-width: 1920px) {
     #game-grid-number-solo-4x4 {
-        margin-top: 13rem;
+        margin-top: 5rem;
         display: grid;
         grid-template-rows: 75px 75px 75px 75px;
         grid-template-columns: 75px 75px 75px 75px;
@@ -324,7 +329,7 @@ body {
     /* === DATA === */
 
 #data {
-    margin-top: 13.5rem;
+    margin-top: 5rem;
     display: flex;
     gap: 1.3rem;
     justify-content: center;
