@@ -95,12 +95,13 @@ export default class Numbers_1p_4x4 {
             if (flip_cards.length === 2) {
               console.log(flip_cards);
               if (flip_cards[0].innerText === flip_cards[1].innerText) {
-                
-                  flip_cards.forEach(e => {
-                   e.style.backgroundColor = "orange";
-                   e.classList.remove("flip");
-                   });
-            
+                  setTimeout(e => {
+                    flip_cards.forEach(e => {
+                      e.style.backgroundColor = "orange";
+                      e.classList.remove("flip");
+                      });
+                  }, 500);
+                  
               } else {
                 setTimeout(function() {
                   flip_cards.forEach(e => {
