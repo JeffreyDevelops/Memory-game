@@ -95,16 +95,16 @@ body {
 }
 
 @keyframes mymove {
-    from {transform: rotateY(0deg);}
-    to {transform: rotateY(360deg);}
+    from {transform: rotateX(0deg);}
+    to {transform: rotateX(360deg);}
   }
 
 .flipCard {
     position: relative;
     background-color: #304859;
     backface-visibility: visible;
-    animation:mymove 1s;
-    transition-delay: .5s;
+    animation:mymove .5s;
+    transition-delay: .4s;
     text-indent: 1px!important;
     font-size: 30px!important;
     color: #FFF;
