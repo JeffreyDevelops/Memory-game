@@ -98,9 +98,13 @@ export default class Numbers_1p_4x4 {
                   setTimeout(e => {
                     flip_cards.forEach(e => {
                       e.style.backgroundColor = "orange";
-                      e.classList.remove("flip");
+                      
                       });
-                  }, 500);
+                  }, 200);
+                  flip_cards.forEach(e => {
+                    e.classList.remove("flip");
+                    });
+                  
                   
               } else {
                 setTimeout(function() {
