@@ -1,3 +1,5 @@
+
+// Memory Menu
 const html_generieren_menu = function() {
     let startMenu = document.createElement("section");
     let body_target = document.querySelector("body");
@@ -39,7 +41,6 @@ const html_generieren_menu = function() {
       </div>
     </div>
   </div>`;
-
   body_target.insertAdjacentElement("afterbegin", startMenu);
 
 }
