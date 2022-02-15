@@ -91,6 +91,7 @@ export default class Numbers_1p_4x4 {
         } 
 
            const flip_cards = this.html_numbers_solo_4x4.querySelectorAll(".flip");
+           const color_change = this.html_numbers_solo_4x4.querySelectorAll("#game-grid-number-solo-4x4 div");
 
             if (flip_cards.length === 2) {
               console.log(flip_cards);
@@ -112,6 +113,7 @@ export default class Numbers_1p_4x4 {
               }
 
             } else if (flip_cards.length > 3) {
+              
                 flip_cards.forEach(e => {
                  e.classList.remove("flipCard");
                  e.classList.remove("flip");

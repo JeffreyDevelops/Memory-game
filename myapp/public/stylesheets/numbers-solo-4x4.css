@@ -111,6 +111,10 @@ body {
     pointer-events: none;
 }
 
+.flip {
+    background-color: #BCCED9!important;
+}
+
 
 
 /* === DATA === */
