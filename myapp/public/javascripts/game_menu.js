@@ -1,5 +1,3 @@
-
-// Memory Menu
 const html_generieren_menu = function() {
     let startMenu = document.createElement("section");
     let body_target = document.querySelector("body");
