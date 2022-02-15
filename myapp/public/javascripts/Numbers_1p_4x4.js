@@ -63,7 +63,7 @@ const html_generieren_numbers_1p_4x4 = function () {
         </div>
         <div class="moves">
           <span class="moves-header">Moves</span>
-          <span class="moves-counter"></span>
+          <span class="moves-counter">0</span>
         </div>
       </div>`
 
@@ -73,6 +73,7 @@ const html_generieren_numbers_1p_4x4 = function () {
 
 
       const click_memory = function () {
+        let moves = 0;
         let card_target = document.querySelector("#game-grid-number-solo-4x4");
         card_target.addEventListener("click", e =>{
           if (e.target.classList.contains("game-flex")) {
@@ -82,9 +83,14 @@ const html_generieren_numbers_1p_4x4 = function () {
         } 
 
            const flip_cards = document.querySelectorAll(".flip");
+           let move_target = document.querySelector(".moves span:nth-of-type(2)");
 
             if (flip_cards.length === 2) {
+              moves ++;
+              move_target.innerHTML = `${moves}`;
               console.log(flip_cards);
+              
+              console.log(moves);
               if (flip_cards[0].innerText === flip_cards[1].innerText) {
                   setTimeout(e => {
                     flip_cards.forEach(e => {
