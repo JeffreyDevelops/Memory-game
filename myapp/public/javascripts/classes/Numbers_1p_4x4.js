@@ -8,6 +8,29 @@ export default class Numbers_1p_4x4 {
     }
 
     html_generieren_numbers_1p_4x4() {
+
+      const numbers = [
+        1,
+        2,
+        3,
+        4,
+        6,
+        5,
+        7,
+        8,
+        3,
+        8,
+        4,
+        5,
+        7,
+        1,
+        6,
+        2
+        ];
+        
+        
+        numbers.sort(() => Math.random() -0.5);
+
         let numbers_1p_4x4 = document.createElement("section");
         numbers_1p_4x4.setAttribute("id", "game-numbers-solo-4x4");
         numbers_1p_4x4.innerHTML = `<nav id="game-nav">
@@ -23,22 +46,22 @@ export default class Numbers_1p_4x4 {
       
       <div class="game-flex">
       <div id="game-grid-number-solo-4x4">
-       <div class="game-flex">1</div>
-       <div class="game-flex">2</div>
-       <div class="game-flex">3</div>
-       <div class="game-flex">4</div>
-       <div class="game-flex">6</div>
-       <div class="game-flex">5</div>
-       <div class="game-flex">7</div>
-       <div class="game-flex">8</div>
-       <div class="game-flex">3</div>
-       <div class="game-flex">8</div>
-       <div class="game-flex">4</div>
-       <div class="game-flex">5</div>
-       <div class="game-flex">7</div>
-       <div class="game-flex">1</div>
-       <div class="game-flex">6</div>
-       <div class="game-flex">2</div>
+       <div class="game-flex">${numbers[0]}</div>
+       <div class="game-flex">${numbers[1]}</div>
+       <div class="game-flex">${numbers[2]}</div>
+       <div class="game-flex">${numbers[3]}</div>
+       <div class="game-flex">${numbers[4]}</div>
+       <div class="game-flex">${numbers[5]}</div>
+       <div class="game-flex">${numbers[6]}</div>
+       <div class="game-flex">${numbers[7]}</div>
+       <div class="game-flex">${numbers[8]}</div>
+       <div class="game-flex">${numbers[9]}</div>
+       <div class="game-flex">${numbers[10]}</div>
+       <div class="game-flex">${numbers[11]}</div>
+       <div class="game-flex">${numbers[12]}</div>
+       <div class="game-flex">${numbers[13]}</div>
+       <div class="game-flex">${numbers[14]}</div>
+       <div class="game-flex">${numbers[15]}</div>
       </div>
       </div>
       
@@ -56,6 +79,8 @@ export default class Numbers_1p_4x4 {
       return numbers_1p_4x4;
       }
 
+      
+
       _click_memory() {
         let card_target = this.html_numbers_solo_4x4.querySelector("#game-grid-number-solo-4x4");
         card_target.addEventListener("click", e =>{
@@ -66,8 +91,7 @@ export default class Numbers_1p_4x4 {
         } 
 
            const flip_cards = this.html_numbers_solo_4x4.querySelectorAll(".flip");
-           
-           
+
             if (flip_cards.length === 2) {
               console.log(flip_cards);
               if (flip_cards[0].innerText === flip_cards[1].innerText) {
