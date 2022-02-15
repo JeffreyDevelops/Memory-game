@@ -1,14 +1,4 @@
-
-
-export default class Numbers_1p_4x4 {
-
-    constructor() {
-        this.html_numbers_solo_4x4 = this.html_generieren_numbers_1p_4x4();
-        this.click_memory = this._click_memory();
-    }
-
-
-    html_generieren_numbers_1p_4x4() {
+const html_generieren_numbers_1p_4x4 = function () {
 
       const numbers = [
         1,
@@ -28,11 +18,11 @@ export default class Numbers_1p_4x4 {
         6,
         2
         ];
-        
-        
+
         numbers.sort(() => Math.random() -0.5);
 
         let numbers_1p_4x4 = document.createElement("section");
+        let target_body = document.querySelector("body");
         numbers_1p_4x4.setAttribute("id", "game-numbers-solo-4x4");
         numbers_1p_4x4.innerHTML = `<nav id="game-nav">
         <div class="game-header-text">
@@ -76,13 +66,14 @@ export default class Numbers_1p_4x4 {
           <span class="moves-counter"></span>
         </div>
       </div>`
+
+        target_body.insertAdjacentElement("afterbegin", numbers_1p_4x4);
       
-      return numbers_1p_4x4;
       }
 
 
-      _click_memory() {
-        let card_target = this.html_numbers_solo_4x4.querySelector("#game-grid-number-solo-4x4");
+      const click_memory = function () {
+        let card_target = document.querySelector("#game-grid-number-solo-4x4");
         card_target.addEventListener("click", e =>{
           if (e.target.classList.contains("game-flex")) {
           const click_card = e.target;
@@ -90,7 +81,7 @@ export default class Numbers_1p_4x4 {
           click_card.classList.add("flip");
         } 
 
-           const flip_cards = this.html_numbers_solo_4x4.querySelectorAll(".flip");
+           const flip_cards = document.querySelectorAll(".flip");
 
             if (flip_cards.length === 2) {
               console.log(flip_cards);
@@ -129,13 +120,11 @@ export default class Numbers_1p_4x4 {
 
       }
 
+      const start_numbers_1p_4x4 = function () {
+        html_generieren_numbers_1p_4x4();
+        click_memory();
+      }
+      start_numbers_1p_4x4();
 
-      anzeigen_numbers_1p_4x4() {
-        let body = document.querySelector("body");
-          if (body !== null) {
-              body.insertAdjacentElement("afterbegin", this.html_numbers_solo_4x4);
-          }
-          
-      }  
-
-}
+ 
+ 
