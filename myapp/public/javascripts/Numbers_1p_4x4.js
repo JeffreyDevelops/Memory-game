@@ -7,6 +7,7 @@ export default class Numbers_1p_4x4 {
         this.click_memory = this._click_memory();
     }
 
+
     html_generieren_numbers_1p_4x4() {
 
       const numbers = [
@@ -71,15 +72,14 @@ export default class Numbers_1p_4x4 {
       
         </div>
         <div class="moves">
-          <span>Moves</span>
-          
+          <span class="moves-header">Moves</span>
+          <span class="moves-counter"></span>
         </div>
       </div>`
       
       return numbers_1p_4x4;
       }
 
-      
 
       _click_memory() {
         let card_target = this.html_numbers_solo_4x4.querySelector("#game-grid-number-solo-4x4");
@@ -98,13 +98,11 @@ export default class Numbers_1p_4x4 {
                   setTimeout(e => {
                     flip_cards.forEach(e => {
                       e.style.backgroundColor = "orange";
-                      
                       });
                   }, 200);
                   flip_cards.forEach(e => {
                     e.classList.remove("flip");
                     });
-                  
                   
               } else {
                 setTimeout(function() {
