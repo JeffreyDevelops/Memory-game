@@ -58,7 +58,8 @@ const html_generieren_numbers_1p_4x4 = function () {
       
       <div id="data">
         <div class="time">
-          <span>Time</span>
+          <span class="time-header">Time</span>
+          <span class="time-counter">0:00</span>
       
         </div>
         <div class="moves">

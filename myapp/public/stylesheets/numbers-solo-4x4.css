@@ -201,7 +201,7 @@ body {
 
     .time {
         background-color: #F2F2F2;
-        padding: 1.5rem 3rem 1.5rem 3rem;
+        padding: 1.5rem 3rem .6rem 3rem;
         border-radius: .3rem;
         display: flex;
         flex-direction: column;
@@ -217,14 +217,27 @@ body {
         flex-direction: column;
     }
 
+    
+
+    .time span {
+        bottom: .6rem;
+    }
+
     .moves-header {
         position: relative;
+        top: .4rem;
+    }
+
+    .time-counter {
+        position: relative;
         top: .1rem;
+        font-size: 20px!important;
+        color: #152938!important;
     }
 
     .moves-counter {
         position: relative;
-        top: .4rem;
+        top: .9rem;
         font-size: 20px!important;
         color: #152938!important;
     }
@@ -307,7 +320,8 @@ body {
     border-radius: .5rem;
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    justify-content: center;
+    gap: 7rem;
 }
 
 .moves {
@@ -321,10 +335,23 @@ body {
     justify-content: center;
 }
 
+.time-header {
+    position: relative;
+    left: .3rem;
+}
+
 .moves-header {
     position: relative;
     top: .1rem;
     left: .3rem;
+}
+
+.time-counter {
+    position: relative;
+    top: 0;
+    font-size: 20px!important;
+    color: #152938!important;
+    right: .2rem;
 }
 
 .moves-counter {
@@ -338,11 +365,10 @@ body {
 
 .time span {
     font-size: 12px;
-    font-weight: bold;
-    color: #7191A5;
-    position: none;
+   font-weight: bold;
+   color: #7191A5;
+   position: none;
     bottom: 0;
-    right: 1.5rem;
  }
 
 .moves span {
@@ -350,7 +376,7 @@ body {
    font-weight: bold;
    color: #7191A5;
    position: none;
-    bottom: 0;
+   bottom: 0;
    
 }
 
@@ -382,7 +408,7 @@ body {
         border-radius: .5rem;
         display: flex;
         flex-direction: row;
-        align-items: flex-start;
+        justify-content: center;
     }
     
     .moves {
@@ -395,6 +421,14 @@ body {
         gap: 7.5rem;
         justify-content: center;
     }
+
+    .time-counter {
+        position: relative;
+        top: 0;
+        font-size: 20px!important;
+        color: #152938!important;
+        right: .2rem;
+    }
     
     .moves-counter {
         position: relative;
@@ -404,6 +438,9 @@ body {
         right: .2rem;
     }
     
+    .time-header {
+        left: .5rem;
+    }
     
     .time span {
         font-size: 12px;
@@ -411,7 +448,7 @@ body {
         color: #7191A5;
         position: none;
         bottom: 0;
-        right: 1.5rem;
+        right: 0.4rem;
      }
     
     .moves span {
