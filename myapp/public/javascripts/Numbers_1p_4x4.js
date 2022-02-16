@@ -93,11 +93,14 @@ const html_generieren_numbers_1p_4x4 = function () {
           minutesLabel.innerHTML = pad2(parseInt(totalSeconds/60));
           }
       
+        // start timer
       function set_timer() {
           minutesLabel = document.getElementById("minutes");
           secondsLabel = document.getElementById("seconds");
           my_int = setInterval(function() { setTime(minutesLabel, secondsLabel)}, 1000);
       }
+
+      // stop timer
       
         function stop_timer() {
           clearInterval(my_int);
@@ -158,6 +161,35 @@ const html_generieren_numbers_1p_4x4 = function () {
 
       }
 
+      // restart game after menu opens
+      const restart_button = function () {
+        let restart = document.querySelector("#menu-restart-button");
+        restart.addEventListener("click", e => {
+          location.reload();
+        });
+      }
+
+      // go back to setup new game after menu opens
+      const new_game = function () {
+        let newGame = document.querySelector("#menu-new-game-button");
+        newGame.addEventListener("click", e => {
+          location.href = "/";
+        });
+      }
+
+      // resume the game after menu opens
+
+      const resume_game = function () {
+        let resumeGame = document.querySelector("#menu-resume-game-button");
+        let deleteMenu = document.querySelector("#menu-outside");
+        resumeGame.addEventListener("click", e => {
+        deleteMenu.remove();
+        stop_timer();
+        set_timer(); 
+        });
+      }
+
+      // click [menu] button
       const click_menu_button = function () {
         let menu_button = document.querySelector("#menu");
         let get_doc = document.querySelector("#game-numbers-solo-4x4");
@@ -171,16 +203,25 @@ const html_generieren_numbers_1p_4x4 = function () {
        
 
         menu_button.addEventListener("click", e => {
-          stop_timer();
           get_doc.insertAdjacentElement("afterbegin", menu_outside);
+          stop_timer();
+          restart_button();
+          new_game();
+          resume_game();
         });
       }
 
+
+
+      
+
+      // starts all function
       const start_numbers_1p_4x4 = function () {
         html_generieren_numbers_1p_4x4();
         click_memory();
         set_timer();
         click_menu_button();
+        
       }
       start_numbers_1p_4x4();
 
