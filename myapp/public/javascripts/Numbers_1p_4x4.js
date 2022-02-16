@@ -59,8 +59,8 @@ const html_generieren_numbers_1p_4x4 = function () {
       <div id="data">
         <div class="time">
           <span class="time-header">Time</span>
-          <span class="time-counter">0:00</span>
-      
+          
+          <div><label class="time-counter" id="minutes" style="font-weight: bold;">0</label><span class='bigger'>:</span><label class="time-counter" id="seconds" style="font-weight: bold;">00</label></div>
         </div>
         <div class="moves">
           <span class="moves-header">Moves</span>
@@ -72,7 +72,38 @@ const html_generieren_numbers_1p_4x4 = function () {
       
       }
 
+      function pad(val) {
+        valString = val + "";
+        if(valString.length < 2) {
+           return "0" + valString;
+           } else {
+           return valString;
+           }
+      }
 
+      function pad2(val) {
+        valString = val + "";
+           return valString;
+      }
+      
+      totalSeconds = 0;
+      function setTime(minutesLabel, secondsLabel) {
+          totalSeconds++;
+          secondsLabel.innerHTML = pad(totalSeconds%60);
+          minutesLabel.innerHTML = pad2(parseInt(totalSeconds/60));
+          }
+      
+      function set_timer() {
+          minutesLabel = document.getElementById("minutes");
+          secondsLabel = document.getElementById("seconds");
+          my_int = setInterval(function() { setTime(minutesLabel, secondsLabel)}, 1000);
+      }
+      
+        function stop_timer() {
+          clearInterval(my_int);
+        }
+      
+      
       const click_memory = function () {
         let moves = 0;
         let card_target = document.querySelector("#game-grid-number-solo-4x4");
@@ -82,16 +113,16 @@ const html_generieren_numbers_1p_4x4 = function () {
           click_card.classList.add("flipCard");
           click_card.classList.add("flip");
         } 
-
+           const orange_cards = document.querySelectorAll(".flipCard");
            const flip_cards = document.querySelectorAll(".flip");
            let move_target = document.querySelector(".moves span:nth-of-type(2)");
 
             if (flip_cards.length === 2) {
               moves ++;
               move_target.innerHTML = `${moves}`;
-              console.log(flip_cards);
-              
-              console.log(moves);
+              if (orange_cards.length === 16) {
+                stop_timer();
+              }
               if (flip_cards[0].innerText === flip_cards[1].innerText) {
                   setTimeout(e => {
                     flip_cards.forEach(e => {
@@ -130,6 +161,7 @@ const html_generieren_numbers_1p_4x4 = function () {
       const start_numbers_1p_4x4 = function () {
         html_generieren_numbers_1p_4x4();
         click_memory();
+        set_timer();
       }
       start_numbers_1p_4x4();
 
