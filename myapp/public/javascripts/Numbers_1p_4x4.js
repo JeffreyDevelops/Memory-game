@@ -161,8 +161,17 @@ const html_generieren_numbers_1p_4x4 = function () {
 
       }
 
+      // memory logo click 
+      const logo_click = function () {
+        let logoClick = document.querySelector(".game-header-text");
+        logoClick.addEventListener("click", e => {
+          location.href = "/";
+        });
+      }
+      
+
       // restart game after menu opens
-      const restart_button = function () {
+      const restart_game = function () {
         let restart = document.querySelector("#menu-restart-button");
         restart.addEventListener("click", e => {
           location.reload();
@@ -205,7 +214,7 @@ const html_generieren_numbers_1p_4x4 = function () {
         menu_button.addEventListener("click", e => {
           get_doc.insertAdjacentElement("afterbegin", menu_outside);
           stop_timer();
-          restart_button();
+          restart_game();
           new_game();
           resume_game();
         });
@@ -221,8 +230,9 @@ const html_generieren_numbers_1p_4x4 = function () {
         click_memory();
         set_timer();
         click_menu_button();
-        
+        logo_click();
       }
+
       start_numbers_1p_4x4();
 
  
