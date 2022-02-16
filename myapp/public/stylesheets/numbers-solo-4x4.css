@@ -167,6 +167,30 @@ body {
     bottom: .8rem;
 }
 
+#menu-outside {
+    background-color: rgba(3, 3, 3, 0.219)!important;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+#pause-bg {
+    background-color: #FFF!important;
+    padding: 7rem 10.3rem 7rem 10.3rem;
+    border-radius: .5rem;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    align-self: center;
+}
+
 /* === MEDIA QUERIES === */
 
 @media (min-width: 320px) {

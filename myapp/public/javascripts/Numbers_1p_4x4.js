@@ -158,10 +158,25 @@ const html_generieren_numbers_1p_4x4 = function () {
 
       }
 
+      const click_menu_button = function () {
+        let menu_button = document.querySelector("#menu");
+        let get_doc = document.querySelector("#game-numbers-solo-4x4");
+        let menu_outside = document.createElement("div");
+        menu_outside.setAttribute("id", "menu-outside");
+        menu_outside.innerHTML = `<div id="pause-bg"></div>`
+       
+
+        menu_button.addEventListener("click", e => {
+          stop_timer();
+          get_doc.insertAdjacentElement("afterbegin", menu_outside);
+        });
+      }
+
       const start_numbers_1p_4x4 = function () {
         html_generieren_numbers_1p_4x4();
         click_memory();
         set_timer();
+        click_menu_button();
       }
       start_numbers_1p_4x4();
 
