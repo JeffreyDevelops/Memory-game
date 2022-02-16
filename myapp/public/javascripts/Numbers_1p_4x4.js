@@ -163,7 +163,11 @@ const html_generieren_numbers_1p_4x4 = function () {
         let get_doc = document.querySelector("#game-numbers-solo-4x4");
         let menu_outside = document.createElement("div");
         menu_outside.setAttribute("id", "menu-outside");
-        menu_outside.innerHTML = `<div id="pause-bg"></div>`
+        menu_outside.innerHTML = `<div id="pause-bg">
+        <button id="menu-restart-button">Restart</button>
+        <button id="menu-new-game-button">New Game</button>
+        <button id="menu-resume-game-button">Resume Game</button>
+        </div>`
        
 
         menu_button.addEventListener("click", e => {
