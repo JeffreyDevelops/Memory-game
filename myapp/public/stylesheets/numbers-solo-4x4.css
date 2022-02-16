@@ -302,6 +302,8 @@ body {
 .time {
     background-color: #F2F2F2;
     width: 100px;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
     border-radius: .5rem;
     display: flex;
     flex-direction: row;
@@ -311,10 +313,26 @@ body {
 .moves {
     background-color: #F2F2F2;
     width: 100px;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
+    gap: 7.5rem;
+    justify-content: center;
+}
+
+.moves-header {
+    position: relative;
+    top: .1rem;
+    left: .3rem;
+}
+
+.moves-counter {
+    position: relative;
+    top: 0;
+    font-size: 20px!important;
+    color: #152938!important;
+    right: .2rem;
 }
 
 
@@ -324,6 +342,7 @@ body {
     color: #7191A5;
     position: none;
     bottom: 0;
+    right: 1.5rem;
  }
 
 .moves span {
@@ -332,6 +351,7 @@ body {
    color: #7191A5;
    position: none;
     bottom: 0;
+   
 }
 
 }
@@ -346,51 +366,61 @@ body {
     }
     /* === DATA === */
 
-#data {
-    margin-top: 5rem;
-    display: flex;
-    gap: 1.3rem;
-    justify-content: center;
+    #data {
+        margin-top: 8rem;
+        display: flex;
+        gap: 1.3rem;
+        justify-content: center;
+        
+    }
     
-}
-
-.time {
-    background-color: #F2F2F2;
-    width: 100px;
-    position: relative;
-    bottom: 1rem;
-    border-radius: .5rem;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-}
-
-.moves {
-    background-color: #F2F2F2;
-    position: relative;
-    bottom: 1rem;
-    width: 100px;
-    border-radius: .5rem;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-}
-
-
-.time span {
-    font-size: 12px;
-    font-weight: bold;
-    color: #7191A5;
-    position: none;
-    bottom: 0;
- }
-
-.moves span {
-   font-size: 12px;
-   font-weight: bold;
-   color: #7191A5;
-   position: none;
-    bottom: 0;
-}
+    .time {
+        background-color: #F2F2F2;
+        width: 100px;
+        padding-top: 1.2rem;
+        padding-bottom: 1.2rem;
+        border-radius: .5rem;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    
+    .moves {
+        background-color: #F2F2F2;
+        width: 100px;
+        border-radius: 0.5rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 7.5rem;
+        justify-content: center;
+    }
+    
+    .moves-counter {
+        position: relative;
+        top: 0;
+        font-size: 20px!important;
+        color: #152938!important;
+        right: .2rem;
+    }
+    
+    
+    .time span {
+        font-size: 12px;
+        font-weight: bold;
+        color: #7191A5;
+        position: none;
+        bottom: 0;
+        right: 1.5rem;
+     }
+    
+    .moves span {
+       font-size: 12px;
+       font-weight: bold;
+       color: #7191A5;
+       position: none;
+        bottom: 0;
+       
+    }
 }
 
