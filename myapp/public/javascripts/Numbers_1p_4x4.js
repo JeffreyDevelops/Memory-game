@@ -105,6 +105,42 @@ const html_generieren_numbers_1p_4x4 = function () {
         function stop_timer() {
           clearInterval(my_int);
         }
+
+
+        const finish_menu = function () {
+          let get_doc = document.querySelector("#game-numbers-solo-4x4");
+          const get_moves = document.querySelector(".moves-counter").innerHTML;
+          const get_time_1 = document.querySelector("#minutes").innerHTML;
+          const get_time_2 = document.querySelector(".bigger").innerHTML;
+          const get_time_3 = document.querySelector("#seconds").innerHTML;
+          let finish_menu = document.createElement("div");
+          finish_menu.setAttribute("id", "finish-outside");
+          finish_menu.innerHTML = `<div id="finish-screen">
+          <div>
+          <h1 id="finish-header">You did it!</h1>
+          <p id="finish-text">Game over! Here's how you got on...<p>
+          </div>
+  
+          <div id="finish-stats">
+          <div id="finish-time">
+          <span>Time Elapsed</span>
+          <span>${get_time_1 + get_time_2 + get_time_3}</span>
+          </div>
+  
+          <div id="finish-moves">
+          <span>Moves Taken</span>
+          <span>${get_moves} Moves</span>
+          </div>
+  
+          <div id="finish-buttons">
+          <button id="finish-restart-button">Restart</button>
+          <button id="finish-new-game-button">Setup New Game</button>
+          </div>`
+          setTimeout(e => {
+            get_doc.insertAdjacentElement("afterbegin", finish_menu);
+          }, 1000);
+          
+        }
       
       
       const click_memory = function () {
@@ -125,6 +161,7 @@ const html_generieren_numbers_1p_4x4 = function () {
               move_target.innerHTML = `${moves}`;
               if (orange_cards.length === 16) {
                 stop_timer();
+                finish_menu();
               }
               if (flip_cards[0].innerText === flip_cards[1].innerText) {
                   setTimeout(e => {
@@ -235,6 +272,7 @@ const html_generieren_numbers_1p_4x4 = function () {
           resume_game();
         });
       }
+
 
 
 
