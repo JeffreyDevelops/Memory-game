@@ -106,7 +106,7 @@ const html_generieren_numbers_1p_4x4 = function () {
           clearInterval(my_int);
         }
 
-
+      // Finish-Menu
         const finish_menu = function () {
           let get_doc = document.querySelector("#game-numbers-solo-4x4");
           const get_moves = document.querySelector(".moves-counter").innerHTML;
@@ -141,6 +141,25 @@ const html_generieren_numbers_1p_4x4 = function () {
           }, 1000);
           
         }
+
+      // finish functions 
+
+          //restart button 
+          const finish_restart = function() {
+          let finish_restart = document.querySelector("#finish-restart-button");
+          finish_restart.addEventListener("click", e => {
+          location.reload();
+          }); 
+          }
+
+          
+          //Setup new Game button 
+          const finish_setup_new_game = function () {
+            let finish_setup_new_game = document.querySelector("#finish-new-game-button");
+            finish_setup_new_game.addEventListener("click" , e => {
+              location.href = "/";
+            });
+          }
       
       
       const click_memory = function () {
@@ -162,6 +181,11 @@ const html_generieren_numbers_1p_4x4 = function () {
               if (orange_cards.length === 16) {
                 stop_timer();
                 finish_menu();
+                setTimeout(function () {
+                  finish_restart();
+                  finish_setup_new_game();
+                }, 1000);
+                
               }
               if (flip_cards[0].innerText === flip_cards[1].innerText) {
                   setTimeout(e => {
