@@ -170,7 +170,7 @@ const html_generieren_numbers_1p_4x4 = function () {
       }
       
 
-      // restart game after menu opens
+      // mobile / restart game after menu opens
       const restart_game = function () {
         let restart = document.querySelector("#menu-restart-button");
         restart.addEventListener("click", e => {
@@ -178,7 +178,7 @@ const html_generieren_numbers_1p_4x4 = function () {
         });
       }
 
-      // go back to setup new game after menu opens
+      // mobile / go back to setup new game after menu opens
       const new_game = function () {
         let newGame = document.querySelector("#menu-new-game-button");
         newGame.addEventListener("click", e => {
@@ -186,7 +186,7 @@ const html_generieren_numbers_1p_4x4 = function () {
         });
       }
 
-      // resume the game after menu opens
+      // mobile / resume the game after menu opens
 
       const resume_game = function () {
         let resumeGame = document.querySelector("#menu-resume-game-button");
@@ -195,6 +195,21 @@ const html_generieren_numbers_1p_4x4 = function () {
         deleteMenu.remove();
         stop_timer();
         set_timer(); 
+        });
+      }
+
+      // desktop / restart game on clicking button
+      const restart_game_desktop = function () {
+        let restart_game = document.querySelector("#restart-button");
+        restart_game.addEventListener("click", e => {
+          location.reload();
+        });
+      }
+
+      const new_game_desktop = function () {
+        let new_game = document.querySelector("#new-game");
+        new_game.addEventListener("click", e => {
+          location.href = "/";
         });
       }
 
@@ -231,6 +246,8 @@ const html_generieren_numbers_1p_4x4 = function () {
         set_timer();
         click_menu_button();
         logo_click();
+        restart_game_desktop();
+        new_game_desktop();
       }
 
       start_numbers_1p_4x4();
