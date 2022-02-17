@@ -206,6 +206,7 @@ const html_generieren_numbers_1p_4x4 = function () {
         });
       }
 
+      // desktop / new game on clicking button
       const new_game_desktop = function () {
         let new_game = document.querySelector("#new-game");
         new_game.addEventListener("click", e => {
