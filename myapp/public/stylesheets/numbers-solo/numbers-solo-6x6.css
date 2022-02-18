@@ -21,7 +21,8 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: 0;
+    align-items: center;
 }
 
 .game-header-text span {
@@ -417,7 +418,7 @@ body {
     }
 
     #data {
-        margin-top: 3rem;
+        margin-top: 0;
         display: flex;
         gap: 1.5rem;
         justify-content: center;
@@ -553,7 +554,7 @@ body {
 /* === DATA === */
 
 #data {
-    margin-top: 3rem;
+    margin-top: 5rem;
     display: flex;
     gap: 1.3rem;
     justify-content: center;
