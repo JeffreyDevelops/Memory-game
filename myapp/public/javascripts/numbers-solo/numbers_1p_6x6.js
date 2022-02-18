@@ -93,7 +93,6 @@ const html_generieren_numbers_1p_4x4 = function () {
        <div class="game-flex">${numbers[33]}</div>
        <div class="game-flex">${numbers[34]}</div>
        <div class="game-flex">${numbers[35]}</div>
-       <div class="game-flex">${numbers[36]}</div>
       </div>
       </div>
       

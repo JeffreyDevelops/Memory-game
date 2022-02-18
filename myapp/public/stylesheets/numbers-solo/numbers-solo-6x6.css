@@ -76,18 +76,20 @@ body {
 #game-grid-number-solo-4x4 {
     margin-top: 10rem;
     display: grid;
-    grid-template-rows: 75px 75px 75px 75px;
-    grid-template-columns: 75px 75px 75px 75px;
+    grid-template-rows: 75px 75px 75px 75px 75px 75px 75px;
+    grid-template-columns: 75px 75px 75px 75px 75px 75px;
     gap: .5rem;
 }
 
 #game-grid-number-solo-4x4 div {
     border-radius: 50%;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 30px;
-    font-size: 10px;
-    padding-right: 30px;
+    height: 0px;
+    width: 0px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 24px;
+    font-size: 5px;
+    padding-right: 26px;
     border: none;
     font-weight: bold;
     background-color: #304859;
@@ -103,10 +105,10 @@ body {
     position: relative;
     background-color: #304859;
     backface-visibility: visible;
-    animation:mymove .5s;
+    animation: mymove .5s;
     transition-delay: .4s;
     text-indent: 1px!important;
-    font-size: 30px!important;
+    font-size: 20px!important;
     color: #FFF;
     pointer-events: none;
 }
@@ -409,8 +411,8 @@ body {
     #game-grid-number-solo-4x4 {
         margin-top: 5rem;
         display: grid;
-        grid-template-rows: 65px 65px 65px 65px;
-        grid-template-columns: 65px 65px 65px 65px;
+        grid-template-rows: 65px 65px 65px 65px 65px 65px;
+        grid-template-columns: 48px 48px 48px 48px 48px 48px;
         gap: .3rem;
     }
 
@@ -471,9 +473,8 @@ body {
     #game-grid-number-solo-4x4 {
         margin-top: 5rem;
         display: grid;
-        grid-template-rows: 75px 75px 75px 75px;
-        grid-template-columns: 75px 75px 75px 75px;
-        gap: .5rem;
+        grid-template-rows: 75px 75px 75px 75px 75px 75px;
+        grid-template-columns: 52px 52px 52px 52px 52px 52px;
     }
 }
 
@@ -517,12 +518,36 @@ body {
         width: 110px;  
 }
 
+.flipCard {
+    position: relative;
+    background-color: #304859;
+    backface-visibility: visible;
+    animation: mymove .5s;
+    transition-delay: .4s;
+    text-indent: 1px!important;
+    font-size: 30px!important;
+    color: #FFF;
+    pointer-events: none;
+}
+
 #game-grid-number-solo-4x4 {
-    margin-top: 8rem;
+    margin-top: 5rem;
     display: grid;
-    grid-template-rows: 75px 75px 75px 75px;
-    grid-template-columns: 75px 75px 75px 75px;
-    gap: 1rem;
+    grid-template-rows: 90px 90px 90px 90px 90px 90px;
+    grid-template-columns: 90px 90px 90px 90px 90px 90px;
+}
+
+#game-grid-number-solo-4x4 div {
+    border-radius: 50%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    font-size: 10px;
+    padding-right: 40px;
+    border: none;
+    font-weight: bold;
+    background-color: #304859;
+    cursor: pointer;
 }
 
 /* === DATA === */
@@ -759,13 +784,40 @@ body {
 }
 
 @media (min-width: 1920px) {
+
+    .flipCard {
+        position: relative;
+        background-color: #304859;
+        backface-visibility: visible;
+        animation: mymove .5s;
+        transition-delay: .4s;
+        text-indent: 1px!important;
+        font-size: 30px!important;
+        color: #FFF;
+        pointer-events: none;
+    }
+
     #game-grid-number-solo-4x4 {
         margin-top: 5rem;
         display: grid;
-        grid-template-rows: 75px 75px 75px 75px;
-        grid-template-columns: 75px 75px 75px 75px;
-        gap: 2rem;
+        grid-template-rows: 90px 90px 90px 90px 90px 90px;
+        grid-template-columns: 90px 90px 90px 90px 90px 90px;
     }
+    
+    #game-grid-number-solo-4x4 div {
+        border-radius: 50%;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        padding-left: 40px;
+        font-size: 10px;
+        padding-right: 40px;
+        border: none;
+        font-weight: bold;
+        background-color: #304859;
+        cursor: pointer;
+    }
+
+    
     /* === DATA === */
 
     #data {
