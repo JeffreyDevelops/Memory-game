@@ -632,9 +632,9 @@ body {
 #finish-screen {
     background-color: #FFF!important;
     /* padding: 4rem 7rem 4rem 7rem; */
-    width: 400px;
+    width: 474px;
     padding-top: 1.5rem;
-    padding-bottom: 1rem;
+    padding-bottom: 3rem;
     border-radius: .5rem;
     z-index: 1;
     top: 0;
@@ -668,7 +668,7 @@ body {
 }
 
 #finish-time {
-    width: 280px;
+    width: 415px;
     padding-top: 1rem;
     padding-bottom: 1rem;
     border-radius: .3rem;
@@ -698,7 +698,7 @@ body {
 }
 
 #finish-moves {
-    width: 280px;
+    width: 415px;
     padding-top: 1rem;
     padding-bottom: 1rem;
     border-radius: .5rem;
@@ -728,34 +728,39 @@ body {
 
 #finish-buttons {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 1rem;
+    margin-top: 1rem;
 }
 
 #finish-restart-button {
     border: none;
-    width: 280px;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    width: 196px;
+    height: 1rem;
+    padding-top: 14px;
+    padding-bottom: 29px;
     border-radius: 2rem;
     background-color: #FDA214;
     color: #FFF;
     cursor: pointer;
     font-weight: bold;
     font-size: 16px;
+    margin-top: 0;
 }
 
 #finish-new-game-button {
     border: none;
-    width: 280px;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    width: 196px;
+    height: 1rem;
+    padding-top: 14px;
+    padding-bottom: 29px;
     border-radius: 2rem;
     background-color: #F2F2F2;
     color: #304859;
     cursor: pointer;
     font-weight: bold;
     font-size: 16px;
+    margin: 0;
 }
 
 }
