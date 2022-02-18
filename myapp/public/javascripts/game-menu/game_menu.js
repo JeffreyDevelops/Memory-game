@@ -125,7 +125,7 @@ const start_game = function () {
 
   // Grid size check
   let fourxfour = document.querySelector("#menu-grid-size > button:nth-of-type(1)");
-  let sixxsix = document.querySelector("#menu-grid-size > button:nth-of-type(1)");
+  let sixxsix = document.querySelector("#menu-grid-size > button:nth-of-type(2)");
 
   let start_button = document.querySelector(".start-btn");
   start_button.addEventListener("click", start => {
@@ -134,8 +134,10 @@ const start_game = function () {
         location.href = "/solo_1_4x4";
       }, 500);
 
+    } else if (theme_numbers.hasAttribute("id") && p_1.hasAttribute("id") && sixxsix.hasAttribute("id")) {
+      location.href = "/solo_1_4x4/6x6";
     } else {
-      console.log("Please only choose 1 Player and theme Numbers / 4x4 Grid, because the other selections are in the making!");
+      alert("you can only play numbers / solo / 4x4 and 6x6");
     }
   
   });

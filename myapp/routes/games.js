@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
 });
 
 /* GET number-solo-6x6. */
-router.get('/', function(req, res, next) {
+router.get('/6x6', function(req, res, next) {
   res.render("numbers-solo/numbers_1p_6x6", {title: "Numbers-Solo-6x6"});
 });
 
