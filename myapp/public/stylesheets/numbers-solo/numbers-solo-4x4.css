@@ -409,7 +409,7 @@ body {
     }
 
     #game-grid-number-solo-4x4 {
-        margin-top: 5rem;
+        margin-top: 3rem;
         display: grid;
         grid-template-rows: 65px 65px 65px 65px;
         grid-template-columns: 65px 65px 65px 65px;
@@ -417,7 +417,7 @@ body {
     }
 
     #data {
-        margin-top: 5rem;
+        margin-top: 3rem;
         display: flex;
         gap: 1.5rem;
         justify-content: center;
@@ -471,11 +471,15 @@ body {
 
 @media (min-width: 375px) {
     #game-grid-number-solo-4x4 {
-        margin-top: 5rem;
+        margin-top: 3rem;
         display: grid;
         grid-template-rows: 75px 75px 75px 75px;
         grid-template-columns: 75px 75px 75px 75px;
         gap: .5rem;
+    }
+
+    #data {
+        margin-top: 3rem;
     }
 }
 
