@@ -10,7 +10,7 @@ var gamesRouter = require('./routes/games');
 var app = express();
 
 // view engine setup
-app.set('views', 'views'); // specify the views directory
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
