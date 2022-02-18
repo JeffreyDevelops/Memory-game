@@ -218,7 +218,7 @@ const html_generieren_numbers_1p_4x4 = function () {
             if (flip_cards.length === 2) {
               moves ++;
               move_target.innerHTML = `${moves}`;
-              if (orange_cards.length === 16) {
+              if (orange_cards.length === 36) {
                 stop_timer();
                 finish_menu();
                 setTimeout(function () {
