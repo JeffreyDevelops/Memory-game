@@ -135,7 +135,10 @@ const start_game = function () {
       }, 500);
 
     } else if (theme_numbers.hasAttribute("id") && p_1.hasAttribute("id") && sixxsix.hasAttribute("id")) {
-      location.href = "/solo_1_4x4/6x6";
+      setTimeout(function() {
+        location.href = "/solo_1_4x4/6x6";
+      }, 500);
+      
     } else {
       alert("you can only play numbers / solo / 4x4 and 6x6");
     }
