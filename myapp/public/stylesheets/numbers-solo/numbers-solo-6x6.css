@@ -86,9 +86,9 @@ body {
     border-radius: 50%;
     height: 0px;
     width: 0px;
-    padding-top: 24px;
-    padding-bottom: 24px;
-    padding-left: 24px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+    padding-left: 26px;
     font-size: 5px;
     padding-right: 26px;
     border: none;
@@ -475,7 +475,7 @@ body {
         margin-top: 1.5rem;
         display: grid;
         grid-template-rows: 75px 75px 75px 75px 75px 75px;
-        grid-template-columns: 52px 52px 52px 52px 52px 52px;
+        grid-template-columns: 55px 55px 55px 55px 55px 55px;
     }
 }
 
