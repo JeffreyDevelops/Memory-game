@@ -410,7 +410,7 @@ body {
     }
 
     #game-grid-number-solo-4x4 {
-        margin-top: 5rem;
+        margin-top: 2rem;
         display: grid;
         grid-template-rows: 65px 65px 65px 65px 65px 65px;
         grid-template-columns: 48px 48px 48px 48px 48px 48px;
@@ -472,7 +472,7 @@ body {
 
 @media (min-width: 375px) {
     #game-grid-number-solo-4x4 {
-        margin-top: 3rem;
+        margin-top: 2rem;
         display: grid;
         grid-template-rows: 75px 75px 75px 75px 75px 75px;
         grid-template-columns: 52px 52px 52px 52px 52px 52px;
