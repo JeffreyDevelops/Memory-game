@@ -826,14 +826,6 @@ body {
 
     
     /* === DATA === */
-
-    #data {
-        margin-top: 5rem;
-        display: flex;
-        gap: 1.3rem;
-        justify-content: center;
-        
-    }
     
     .time {
         background-color: #F2F2F2;
