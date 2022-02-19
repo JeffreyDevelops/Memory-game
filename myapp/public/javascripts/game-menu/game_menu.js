@@ -130,25 +130,19 @@ const start_game = function () {
   let start_button = document.querySelector(".start-btn");
   start_button.addEventListener("click", start => {
     if (theme_numbers.hasAttribute("id") && p_1.hasAttribute("id") && fourxfour.hasAttribute("id")) {
-      setTimeout(function() {
         location.href = "/solo_1_4x4";
-      }, 500);
+
 
     } else if (theme_numbers.hasAttribute("id") && p_1.hasAttribute("id") && sixxsix.hasAttribute("id")) {
-      setTimeout(function() {
         location.href = "/solo_1_4x4/6x6";
-      }, 500);
       
     }
       
     if (theme_icon.hasAttribute("id") && p_1.hasAttribute("id") && fourxfour.hasAttribute("id")) {
-      setTimeout(() => {
         location.href = "/solo_1_4x4/icons-solo-4x4";
-      }, 500);
+
     } else if (theme_icon.hasAttribute("id") && p_1.hasAttribute("id") && sixxsix.hasAttribute("id")) {
-      setTimeout(() => {
         location.href = "/solo_1_4x4/icons-solo-6x6";
-      }, 500);
     }
   
   });
