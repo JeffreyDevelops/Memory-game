@@ -1,45 +1,45 @@
 const html_generieren_numbers_1p_4x4 = function () {
 
-      const numbers = [
-        1,
-        2,
-        3,
-        4,
-        6,
-        5,
-        7,
-        8,
-        3,
-        8,
-        4,
-        5,
-        7,
-        1,
-        6,
-        2,
-        9,
-        10,
-        9,
-        10,
-        11,
-        12,
-        11,
-        12,
-        13,
-        14,
-        13,
-        14,
-        15,
-        16,
-        15,
-        16,
-        17,
-        18,
-        17,
-        18
+      const icons = [
+        `<i class="fa-solid fa-coffee fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-hand-sparkles fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-coffee fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-hand-sparkles fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-socks fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-poo fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-socks fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-poo fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-motorcycle fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-brush fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-motorcycle fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-brush fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-code fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-ghost fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-code fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-ghost fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-ice-cream fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-broom-ball fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-ice-cream fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-broom-ball fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-skull-crossbones fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-user-astronaut fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-skull-crossbones fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-user-astronaut fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-user-secret fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-virus fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-user-secret fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-virus fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-guitar fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-poo-storm fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-guitar fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-poo-storm fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-bath fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-whiskey-glass"></i>`,
+        `<i class="fa-solid fa-bath fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-whiskey-glass"></i>`,
         ];
 
-        numbers.sort(() => Math.random() -0.5);
+        icons.sort(() => Math.random() -0.5);
 
         let numbers_1p_4x4 = document.createElement("section");
         let target_body = document.querySelector("body");
@@ -57,42 +57,42 @@ const html_generieren_numbers_1p_4x4 = function () {
       
       <div class="game-flex">
       <div id="game-grid-number-solo-4x4">
-       <div class="game-flex">${numbers[0]}</div>
-       <div class="game-flex">${numbers[1]}</div>
-       <div class="game-flex">${numbers[2]}</div>
-       <div class="game-flex">${numbers[3]}</div>
-       <div class="game-flex">${numbers[4]}</div>
-       <div class="game-flex">${numbers[5]}</div>
-       <div class="game-flex">${numbers[6]}</div>
-       <div class="game-flex">${numbers[7]}</div>
-       <div class="game-flex">${numbers[8]}</div>
-       <div class="game-flex">${numbers[9]}</div>
-       <div class="game-flex">${numbers[10]}</div>
-       <div class="game-flex">${numbers[11]}</div>
-       <div class="game-flex">${numbers[12]}</div>
-       <div class="game-flex">${numbers[13]}</div>
-       <div class="game-flex">${numbers[14]}</div>
-       <div class="game-flex">${numbers[15]}</div>
-       <div class="game-flex">${numbers[16]}</div>
-       <div class="game-flex">${numbers[17]}</div>
-       <div class="game-flex">${numbers[18]}</div>
-       <div class="game-flex">${numbers[19]}</div>
-       <div class="game-flex">${numbers[20]}</div>
-       <div class="game-flex">${numbers[21]}</div>
-       <div class="game-flex">${numbers[22]}</div>
-       <div class="game-flex">${numbers[23]}</div>
-       <div class="game-flex">${numbers[24]}</div>
-       <div class="game-flex">${numbers[25]}</div>
-       <div class="game-flex">${numbers[26]}</div>
-       <div class="game-flex">${numbers[27]}</div>
-       <div class="game-flex">${numbers[28]}</div>
-       <div class="game-flex">${numbers[29]}</div>
-       <div class="game-flex">${numbers[30]}</div>
-       <div class="game-flex">${numbers[31]}</div>
-       <div class="game-flex">${numbers[32]}</div>
-       <div class="game-flex">${numbers[33]}</div>
-       <div class="game-flex">${numbers[34]}</div>
-       <div class="game-flex">${numbers[35]}</div>
+       <div class="game-flex">${icons[0]}</div>
+       <div class="game-flex">${icons[1]}</div>
+       <div class="game-flex">${icons[2]}</div>
+       <div class="game-flex">${icons[3]}</div>
+       <div class="game-flex">${icons[4]}</div>
+       <div class="game-flex">${icons[5]}</div>
+       <div class="game-flex">${icons[6]}</div>
+       <div class="game-flex">${icons[7]}</div>
+       <div class="game-flex">${icons[8]}</div>
+       <div class="game-flex">${icons[9]}</div>
+       <div class="game-flex">${icons[10]}</div>
+       <div class="game-flex">${icons[11]}</div>
+       <div class="game-flex">${icons[12]}</div>
+       <div class="game-flex">${icons[13]}</div>
+       <div class="game-flex">${icons[14]}</div>
+       <div class="game-flex">${icons[15]}</div>
+       <div class="game-flex">${icons[16]}</div>
+       <div class="game-flex">${icons[17]}</div>
+       <div class="game-flex">${icons[18]}</div>
+       <div class="game-flex">${icons[19]}</div>
+       <div class="game-flex">${icons[20]}</div>
+       <div class="game-flex">${icons[21]}</div>
+       <div class="game-flex">${icons[22]}</div>
+       <div class="game-flex">${icons[23]}</div>
+       <div class="game-flex">${icons[24]}</div>
+       <div class="game-flex">${icons[25]}</div>
+       <div class="game-flex">${icons[26]}</div>
+       <div class="game-flex">${icons[27]}</div>
+       <div class="game-flex">${icons[28]}</div>
+       <div class="game-flex">${icons[29]}</div>
+       <div class="game-flex">${icons[30]}</div>
+       <div class="game-flex">${icons[31]}</div>
+       <div class="game-flex">${icons[32]}</div>
+       <div class="game-flex">${icons[33]}</div>
+       <div class="game-flex">${icons[34]}</div>
+       <div class="game-flex">${icons[35]}</div>
       </div>
       </div>
       
@@ -227,7 +227,7 @@ const html_generieren_numbers_1p_4x4 = function () {
                 }, 1000);
                 
               }
-              if (flip_cards[0].innerText === flip_cards[1].innerText) {
+              if (flip_cards[0].innerHTML === flip_cards[1].innerHTML) {
                   setTimeout(e => {
                     flip_cards.forEach(e => {
                       e.style.backgroundColor = "orange";

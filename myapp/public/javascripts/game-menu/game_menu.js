@@ -145,6 +145,8 @@ const start_game = function () {
       setTimeout(() => {
         location.href = "/solo_1_4x4/icons-solo-4x4";
       }, 500);
+    } else if (theme_icon.hasAttribute("id") && p_1.hasAttribute("id") && sixxsix.hasAttribute("id")) {
+      location.href = "/solo_1_4x4/icons-solo-6x6";
     }
   
   });
