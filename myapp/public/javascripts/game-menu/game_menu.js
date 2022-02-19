@@ -139,8 +139,12 @@ const start_game = function () {
         location.href = "/solo_1_4x4/6x6";
       }, 500);
       
-    } else {
-      alert("you can only play numbers / solo / 4x4 and 6x6");
+    }
+      
+    if (theme_icon.hasAttribute("id") && p_1.hasAttribute("id") && fourxfour.hasAttribute("id")) {
+      setTimeout(() => {
+        location.href = "/solo_1_4x4/icons-solo-4x4";
+      }, 500);
     }
   
   });

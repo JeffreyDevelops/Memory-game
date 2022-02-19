@@ -1,25 +1,25 @@
 const html_generieren_numbers_1p_4x4 = function () {
 
-      const numbers = [
-        1,
-        2,
-        3,
-        4,
-        6,
-        5,
-        7,
-        8,
-        3,
-        8,
-        4,
-        5,
-        7,
-        1,
-        6,
-        2
+      const icons = [
+        `<i class="fa-solid fa-coffee fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-hand-sparkles fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-coffee fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-hand-sparkles fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-socks fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-poo fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-socks fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-poo fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-motorcycle fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-brush fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-motorcycle fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-brush fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-code fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-ghost fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-code fa-fa-2xs"></i>`,
+        `<i class="fa-solid fa-ghost fa-fa-2xs"></i>`,
         ];
 
-        numbers.sort(() => Math.random() -0.5);
+        icons.sort(() => Math.random() -0.5);
 
         let numbers_1p_4x4 = document.createElement("section");
         let target_body = document.querySelector("body");
@@ -37,22 +37,22 @@ const html_generieren_numbers_1p_4x4 = function () {
       
       <div class="game-flex">
       <div id="game-grid-number-solo-4x4">
-       <div class="game-flex">${numbers[0]}</div>
-       <div class="game-flex">${numbers[1]}</div>
-       <div class="game-flex">${numbers[2]}</div>
-       <div class="game-flex">${numbers[3]}</div>
-       <div class="game-flex">${numbers[4]}</div>
-       <div class="game-flex">${numbers[5]}</div>
-       <div class="game-flex">${numbers[6]}</div>
-       <div class="game-flex">${numbers[7]}</div>
-       <div class="game-flex">${numbers[8]}</div>
-       <div class="game-flex">${numbers[9]}</div>
-       <div class="game-flex">${numbers[10]}</div>
-       <div class="game-flex">${numbers[11]}</div>
-       <div class="game-flex">${numbers[12]}</div>
-       <div class="game-flex">${numbers[13]}</div>
-       <div class="game-flex">${numbers[14]}</div>
-       <div class="game-flex">${numbers[15]}</div>
+       <div class="game-flex">${icons[0]}</div>
+       <div class="game-flex">${icons[1]}</div>
+       <div class="game-flex">${icons[2]}</div>
+       <div class="game-flex">${icons[3]}</div>
+       <div class="game-flex">${icons[4]}</div>
+       <div class="game-flex">${icons[5]}</div>
+       <div class="game-flex">${icons[6]}</div>
+       <div class="game-flex">${icons[7]}</div>
+       <div class="game-flex">${icons[8]}</div>
+       <div class="game-flex">${icons[9]}</div>
+       <div class="game-flex">${icons[10]}</div>
+       <div class="game-flex">${icons[11]}</div>
+       <div class="game-flex">${icons[12]}</div>
+       <div class="game-flex">${icons[13]}</div>
+       <div class="game-flex">${icons[14]}</div>
+       <div class="game-flex">${icons[15]}</div>
       </div>
       </div>
       
@@ -187,7 +187,7 @@ const html_generieren_numbers_1p_4x4 = function () {
                 }, 1000);
                 
               }
-              if (flip_cards[0].innerText === flip_cards[1].innerText) {
+              if (flip_cards[0].innerHTML === flip_cards[1].innerHTML) {
                   setTimeout(e => {
                     flip_cards.forEach(e => {
                       e.style.backgroundColor = "orange";
