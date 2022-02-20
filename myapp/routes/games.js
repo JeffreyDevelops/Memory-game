@@ -28,12 +28,23 @@ router.get('/icons-solo-6x6', function(req, res, next) {
 
 /* GET number-2players-4x4. */
 router.get('/numbers-2players-4x4', function(req, res, next) {
-  res.render("numbers-2players/numbers_2p_4x4", {title: "Numbers-2players-4x4"});
+  res.render("2players/numbers-2players/numbers_2p_4x4", {title: "Numbers-2players-4x4"});
 });
 
 /* GET number-2players-6x6. */
 router.get('/numbers-2players-6x6', function(req, res, next) {
-  res.render("numbers-2players/numbers_2p_6x6", {title: "Numbers-2players-6x6"});
+  res.render("2players/numbers-2players/numbers_2p_6x6", {title: "Numbers-2players-6x6"});
+});
+
+
+/* GET icons-2players-4x4. */
+router.get('/icons-2players-4x4', function(req, res, next) {
+  res.render("2players/icons-2players/icons_2p_4x4", {title: "Icons-2players-4x4"});
+});
+
+/* GET icons-2players-6x6. */
+router.get('/icons-2players-6x6', function(req, res, next) {
+  res.render("2players/icons-2players/icons_2p_6x6", {title: "Icons-2players-6x6"});
 });
 
 module.exports = router;

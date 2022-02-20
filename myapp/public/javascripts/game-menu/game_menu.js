@@ -150,7 +150,16 @@ const start_game = function () {
     // === 2PLAYERS === //
     if (theme_numbers.hasAttribute("id") && p_2.hasAttribute("id") && fourxfour.hasAttribute("id")) {
       location.href = "/solo_1_4x4/numbers-2players-4x4";
+    } else if (theme_numbers.hasAttribute("id") && p_2.hasAttribute("id") && sixxsix.hasAttribute("id")) {
+      location.href = "/solo_1_4x4/numbers-2players-6x6";
     }
+
+    if (theme_icon.hasAttribute("id") && p_2.hasAttribute("id") && fourxfour.hasAttribute("id")) {
+      location.href = "/solo_1_4x4/icons-2players-4x4";
+    } else if (theme_icon.hasAttribute("id") && p_2.hasAttribute("id") && sixxsix.hasAttribute("id")) {
+      location.href = "/solo_1_4x4/icons-2players-6x6";
+    }
+      
   });
 }
 
