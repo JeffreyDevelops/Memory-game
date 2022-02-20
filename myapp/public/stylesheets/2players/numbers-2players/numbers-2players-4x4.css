@@ -162,10 +162,10 @@ body {
 .moves span {
    font-size: 12px;
    font-weight: bold;
-   color: #7191A5;
    position: relative;
     bottom: .8rem;
 }
+
 
 /* === Menu onClick === */
 
@@ -423,19 +423,10 @@ body {
         justify-content: center;
         
     }
-
-    .time {
-        background-color: #F2F2F2;
-        padding: 1.5rem 3rem .6rem 3rem;
-        border-radius: .3rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
     
     .moves {
         background-color: #F2F2F2;
-        padding: .5rem 3rem .5rem 3rem;
+        padding: 0.2rem 1.3rem 1.3rem 1.5rem;
         position: relative;
         border-radius: .3rem;
         display: flex;
@@ -451,6 +442,7 @@ body {
     .moves-header {
         position: relative;
         top: .4rem;
+        color: #7191A5;
     }
 
     .time-counter {
@@ -464,7 +456,7 @@ body {
         position: relative;
         top: .9rem;
         font-size: 20px!important;
-        color: #152938!important;
+        color: #152938;
     }
 
 }
@@ -605,14 +597,13 @@ body {
     position: relative;
     top: 0;
     font-size: 20px!important;
-    color: #152938!important;
+    color: #152938;
     right: .2rem;
 }
 
 .moves span {
    font-size: 12px;
    font-weight: bold;
-   color: #7191A5;
    position: none;
    bottom: 0;
    
@@ -842,14 +833,13 @@ body {
         position: relative;
         top: 0;
         font-size: 20px!important;
-        color: #152938!important;
+        color: #152938;
         right: .2rem;
     }
     
     .moves span {
        font-size: 12px;
        font-weight: bold;
-       color: #7191A5;
        position: none;
         bottom: 0;
        

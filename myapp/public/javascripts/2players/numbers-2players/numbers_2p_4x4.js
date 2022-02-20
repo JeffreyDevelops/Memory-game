@@ -57,14 +57,21 @@ const html_generieren_numbers_1p_4x4 = function () {
       </div>
       
       <div id="data">
-        <div class="time">
-          <span class="time-header">Time</span>
-          
-          <div><label class="time-counter" id="minutes" style="font-weight: bold;">0</label><span class='bigger'>:</span><label class="time-counter" id="seconds" style="font-weight: bold;">00</label></div>
+        <div class="moves">
+          <span class="moves-header">P1</span>
+          <span class="moves-counter">0</span>
         </div>
         <div class="moves">
-          <span class="moves-header">Moves</span>
+          <span class="moves-header">P2</span>
           <span class="moves-counter">0</span>
+        </div>
+        <div class="moves">
+          <span class="moves-header">P3</span>
+          <span class="moves-counter">/</span>
+        </div>
+        <div class="moves">
+          <span class="moves-header">P4</span>
+          <span class="moves-counter">/</span>
         </div>
       </div>`
 
@@ -72,40 +79,7 @@ const html_generieren_numbers_1p_4x4 = function () {
       
       }
 
-      function pad(val) {
-        valString = val + "";
-        if(valString.length < 2) {
-           return "0" + valString;
-           } else {
-           return valString;
-           }
-      }
-
-      function pad2(val) {
-        valString = val + "";
-           return valString;
-      }
-      
-      totalSeconds = 0;
-      function setTime(minutesLabel, secondsLabel) {
-          totalSeconds++;
-          secondsLabel.innerHTML = pad(totalSeconds%60);
-          minutesLabel.innerHTML = pad2(parseInt(totalSeconds/60));
-          }
-      
-        // start timer
-      function set_timer() {
-          minutesLabel = document.getElementById("minutes");
-          secondsLabel = document.getElementById("seconds");
-          my_int = setInterval(function() { setTime(minutesLabel, secondsLabel)}, 1000);
-      }
-
-      // stop timer
-      
-        function stop_timer() {
-          clearInterval(my_int);
-        }
-
+     
       // Finish-Menu
         const finish_menu = function () {
           let get_doc = document.querySelector("#game-numbers-solo-4x4");
@@ -160,10 +134,10 @@ const html_generieren_numbers_1p_4x4 = function () {
               location.href = "/";
             });
           }
-      
+
       
       const click_memory = function () {
-        let moves = 0;
+        let pair = 0;
         let card_target = document.querySelector("#game-grid-number-solo-4x4");
         card_target.addEventListener("click", e =>{
           if (e.target.classList.contains("game-flex")) {
@@ -173,13 +147,10 @@ const html_generieren_numbers_1p_4x4 = function () {
         } 
            const orange_cards = document.querySelectorAll(".flipCard");
            const flip_cards = document.querySelectorAll(".flip");
-           let move_target = document.querySelector(".moves span:nth-of-type(2)");
+           let pair_target = document.querySelector(".moves span:nth-of-type(2)");
 
             if (flip_cards.length === 2) {
-              moves ++;
-              move_target.innerHTML = `${moves}`;
               if (orange_cards.length === 16) {
-                stop_timer();
                 finish_menu();
                 setTimeout(function () {
                   finish_restart();
@@ -188,6 +159,8 @@ const html_generieren_numbers_1p_4x4 = function () {
                 
               }
               if (flip_cards[0].innerText === flip_cards[1].innerText) {
+                pair ++;
+                pair_target.innerHTML = `${pair}`;
                   setTimeout(e => {
                     flip_cards.forEach(e => {
                       e.style.backgroundColor = "orange";
@@ -196,6 +169,7 @@ const html_generieren_numbers_1p_4x4 = function () {
                   flip_cards.forEach(e => {
                     e.classList.remove("flip");
                     });
+                    
                   
               } else {
                 setTimeout(function() {
@@ -204,8 +178,10 @@ const html_generieren_numbers_1p_4x4 = function () {
                    e.classList.remove("flip");
                    });
                 }, 1000);
-                
+                        
+
               }
+              
 
             } else if (flip_cards.length > 3) {
               
@@ -254,8 +230,6 @@ const html_generieren_numbers_1p_4x4 = function () {
         let deleteMenu = document.querySelector("#menu-outside");
         resumeGame.addEventListener("click", e => {
         deleteMenu.remove();
-        stop_timer();
-        set_timer(); 
         });
       }
 
@@ -290,7 +264,6 @@ const html_generieren_numbers_1p_4x4 = function () {
 
         menu_button.addEventListener("click", e => {
           get_doc.insertAdjacentElement("afterbegin", menu_outside);
-          stop_timer();
           restart_game();
           new_game();
           resume_game();
@@ -306,11 +279,11 @@ const html_generieren_numbers_1p_4x4 = function () {
       const start_numbers_1p_4x4 = function () {
         html_generieren_numbers_1p_4x4();
         click_memory();
-        set_timer();
         click_menu_button();
         logo_click();
         restart_game_desktop();
         new_game_desktop();
+        p1();
       }
 
       start_numbers_1p_4x4();
