@@ -163,8 +163,9 @@ body {
    font-size: 12px;
    font-weight: bold;
    position: relative;
-    bottom: .8rem;
+   bottom: 0.1rem;
 }
+
 
 
 /* === Menu onClick === */
@@ -459,6 +460,23 @@ body {
         color: #152938;
     }
 
+    .p1-mobile {
+        display: none;
+    }
+    
+    .p2-mobile {
+        display: none;
+    }
+    
+    .p3-mobile {
+        display: none;
+    }
+    
+    .p4-mobile {
+        display: none;
+    }
+    
+
 }
 
 @media (min-width: 375px) {
@@ -577,28 +595,26 @@ body {
 
 .moves {
     background-color: #F2F2F2;
-    width: 100px;
-    border-radius: 0.5rem;
+    padding: 0.2rem 5.3rem 1.3rem 1.5rem;
+    position: relative;
+    border-radius: 0.3rem;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 7.5rem;
-    justify-content: center;
+    flex-direction: column;
 }
 
 .moves-header {
     position: relative;
-    top: .1rem;
-    left: .3rem;
+    top: 0.4rem;
+    right: 1rem;
 }
 
 
 .moves-counter {
     position: relative;
-    top: 0;
+    top: 0.9rem;
     font-size: 20px!important;
     color: #152938;
-    right: .2rem;
+    right: 2rem;
 }
 
 .moves span {
@@ -607,6 +623,38 @@ body {
    position: none;
    bottom: 0;
    
+}
+
+.p1-mobile {
+    display: inline-block;
+}
+
+.p2-mobile {
+    display: inline-block;
+}
+
+.p3-mobile {
+    display: inline-block;
+}
+
+.p4-mobile {
+    display: inline-block;
+}
+
+.p1-desktop {
+    display: none;
+}
+
+.p2-desktop {
+    display: none;
+}
+
+.p3-desktop {
+    display: none;
+}
+
+.p4-desktop {
+    display: none;
 }
 
 /* === finish screen === */

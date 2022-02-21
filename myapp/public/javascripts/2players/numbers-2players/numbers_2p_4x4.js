@@ -58,19 +58,19 @@ const html_generieren_numbers_1p_4x4 = function () {
   
   <div id="data">
     <div id="p1" class="moves">
-      <span class="moves-header">P1</span>
+      <span class="moves-header"><span class="p1-desktop">P1</span><span class="p1-mobile">Player 1</span></span>
       <span class="moves-counter">0</span>
     </div>
     <div id="p2" class="moves">
-      <span class="moves-header">P2</span>
+      <span class="moves-header"><span class="p2-desktop">P2</span><span class="p2-mobile">Player 2</span></span>
       <span class="moves-counter">0</span>
     </div>
     <div class="moves">
-      <span class="moves-header">P3</span>
+      <span class="moves-header"><span class="p3-desktop">P3</span><span class="p3-mobile">Player 3</span></span>
       <span class="moves-counter">/</span>
     </div>
     <div class="moves">
-      <span class="moves-header">P4</span>
+      <span class="moves-header"><span class="p4-desktop">P4</span><span class="p4-mobile">Player 4</span></span>
       <span class="moves-counter">/</span>
     </div>
   </div>`
