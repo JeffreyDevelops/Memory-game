@@ -83,10 +83,8 @@ const html_generieren_numbers_1p_4x4 = function () {
   // Finish-Menu
     const finish_menu = function () {
       let get_doc = document.querySelector("#game-numbers-solo-4x4");
-      const get_moves = document.querySelector(".moves-counter").innerHTML;
-      const get_time_1 = document.querySelector("#minutes").innerHTML;
-      const get_time_2 = document.querySelector(".bigger").innerHTML;
-      const get_time_3 = document.querySelector("#seconds").innerHTML;
+      const get_pair_1 = document.querySelector("#p1 .moves-counter").innerHTML;
+      const get_pair_2 = document.querySelector("#p2 .moves-counter").innerHTML;
       let finish_menu = document.createElement("div");
       finish_menu.setAttribute("id", "finish-outside");
       finish_menu.innerHTML = `<div id="finish-screen">
@@ -96,23 +94,23 @@ const html_generieren_numbers_1p_4x4 = function () {
       </div>
 
       <div id="finish-stats">
-      <div id="finish-time">
-      <span>Time Elapsed</span>
-      <span>${get_time_1 + get_time_2 + get_time_3}</span>
+      <div id="finish-moves">
+      <span>Player 1</span>
+      <span>${get_pair_1} Pairs</span>
       </div>
 
       <div id="finish-moves">
-      <span>Moves Taken</span>
-      <span>${get_moves} Moves</span>
+      <span>Player 2</span>
+      <span>${get_pair_2} Pairs</span>
       </div>
 
       <div id="finish-buttons">
       <button id="finish-restart-button">Restart</button>
       <button id="finish-new-game-button">Setup New Game</button>
       </div>`
-      setTimeout(e => {
+      
         get_doc.insertAdjacentElement("afterbegin", finish_menu);
-      }, 1000);
+      
       
     }
 
@@ -157,11 +155,14 @@ const html_generieren_numbers_1p_4x4 = function () {
 
         if (flip_cards.length === 2) {
           if (orange_cards.length === 16) {
-            finish_menu();
+            setTimeout(function () {
+              finish_menu();
+            }, 500);
+            
             setTimeout(function () {
               finish_restart();
               finish_setup_new_game();
-            }, 1000);
+            }, 600);
             
           }
           if (flip_cards[0].innerText === flip_cards[1].innerText && color_call.style.backgroundColor === "orange") {
