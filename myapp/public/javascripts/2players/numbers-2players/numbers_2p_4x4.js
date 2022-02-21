@@ -85,12 +85,18 @@ const html_generieren_numbers_1p_4x4 = function () {
       let get_doc = document.querySelector("#game-numbers-solo-4x4");
       const get_pair_1 = document.querySelector("#p1 .moves-counter").innerHTML;
       const get_pair_2 = document.querySelector("#p2 .moves-counter").innerHTML;
+      let winner;
+      if (get_pair_1 > get_pair_2) {
+        winner = "1";
+      } else {
+        winner = "2";
+      }
       let finish_menu = document.createElement("div");
       finish_menu.setAttribute("id", "finish-outside");
       finish_menu.innerHTML = `<div id="finish-screen">
       <div>
-      <h1 id="finish-header">You did it!</h1>
-      <p id="finish-text">Game over! Here's how you got on...<p>
+      <h1 id="finish-header">Player ${winner} Wins!</h1>
+      <p id="finish-text">Game over! Here are the results...<p>
       </div>
 
       <div id="finish-stats">
