@@ -152,8 +152,8 @@ const html_generieren_numbers_1p_4x4 = function () {
     } 
        const orange_cards = document.querySelectorAll(".flipCard");
        const flip_cards = document.querySelectorAll(".flip");
-       let pair_target = document.querySelector(".moves span:nth-of-type(2)");
-       let pair_target_2 = document.querySelector(".moves:nth-of-type(2) span:nth-of-type(2)");
+       let pair_target = document.querySelector(".moves:nth-of-type(1) .moves-counter");
+       let pair_target_2 = document.querySelector(".moves:nth-of-type(2) .moves-counter");
 
         if (flip_cards.length === 2) {
           if (orange_cards.length === 16) {
