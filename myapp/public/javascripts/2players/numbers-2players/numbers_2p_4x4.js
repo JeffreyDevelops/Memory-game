@@ -79,35 +79,66 @@ const html_generieren_numbers_1p_4x4 = function () {
   
   }
 
+
+  const check_pair = function () {
+    
+      
+        let winner_pair_bg_1 = document.querySelector("#finish-moves:nth-of-type(1)");
+        let winner_pair_bg_2 = document.querySelector("#finish-moves:nth-of-type(2)");
+        let winner_target = document.querySelector("#finish-header");
+        let p1_pair_header_1 = document.querySelector("#finish-moves:nth-of-type(1) span:nth-of-type(1)");
+        let p2_pair_header_2 = document.querySelector("#finish-moves:nth-of-type(2) span:nth-of-type(1)");
+        let p1_pair = document.querySelector("#finish-moves:nth-of-type(1) span:nth-of-type(2)");
+        let p2_pair = document.querySelector("#finish-moves:nth-of-type(2) span:nth-of-type(2)");
+        const get_pair_1 = document.querySelector("#p1 .moves-counter").innerHTML;
+        const get_pair_2 = document.querySelector("#p2 .moves-counter").innerHTML;
+        
+        p1_pair.innerText = `${get_pair_1} Pairs`;
+        
+        p2_pair.innerText = `${get_pair_2} Pairs`;
+
+        if (get_pair_1 > get_pair_2) {
+          let winner;
+          winner = "1";
+          winner_target.innerText = `Player ${winner} Wins!`;
+          winner_pair_bg_1.style.backgroundColor = "#152938";
+          p1_pair_header_1.style.setProperty("color", "#FFF", "important");
+          p1_pair.style.setProperty("color", "#FFF", "important");
+          
+          
+        } else {
+          let winner_2
+          winner_2 = "2";
+          winner_target.innerText = `Player ${winner_2} Wins!`;
+          winner_pair_bg_2.style.backgroundColor = "#152938";
+          p2_pair.style.setProperty("color", "#FFF", "important");
+          p2_pair_header_2.style.setProperty("color", "#FFF", "important");
+        }
+     
+  }
+
  
   // Finish-Menu
     const finish_menu = function () {
       let get_doc = document.querySelector("#game-numbers-solo-4x4");
-      const get_pair_1 = document.querySelector("#p1 .moves-counter").innerHTML;
-      const get_pair_2 = document.querySelector("#p2 .moves-counter").innerHTML;
-      let winner;
-      if (get_pair_1 > get_pair_2) {
-        winner = "1";
-      } else {
-        winner = "2";
-      }
+      
       let finish_menu = document.createElement("div");
       finish_menu.setAttribute("id", "finish-outside");
       finish_menu.innerHTML = `<div id="finish-screen">
       <div>
-      <h1 id="finish-header">Player ${winner} Wins!</h1>
+      <h1 id="finish-header"></h1>
       <p id="finish-text">Game over! Here are the results...<p>
       </div>
 
       <div id="finish-stats">
       <div id="finish-moves">
       <span>Player 1</span>
-      <span>${get_pair_1} Pairs</span>
+      <span></span>
       </div>
 
       <div id="finish-moves">
       <span>Player 2</span>
-      <span>${get_pair_2} Pairs</span>
+      <span></span>
       </div>
 
       <div id="finish-buttons">
@@ -164,7 +195,11 @@ const html_generieren_numbers_1p_4x4 = function () {
             setTimeout(function () {
               finish_menu();
             }, 500);
-            
+
+            setTimeout(function () {
+              check_pair();
+            }, 600);
+
             setTimeout(function () {
               finish_restart();
               finish_setup_new_game();
