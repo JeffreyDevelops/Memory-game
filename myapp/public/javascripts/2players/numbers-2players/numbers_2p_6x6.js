@@ -128,14 +128,20 @@ const html_generieren_numbers_1p_4x4 = function () {
         let p2_pair_header_2 = document.querySelector("#finish-moves:nth-of-type(2) span:nth-of-type(1)");
         let p1_pair = document.querySelector("#finish-moves:nth-of-type(1) span:nth-of-type(2)");
         let p2_pair = document.querySelector("#finish-moves:nth-of-type(2) span:nth-of-type(2)");
-        const get_pair_1 = document.querySelector("#p1 .moves-counter").innerHTML;
-        const get_pair_2 = document.querySelector("#p2 .moves-counter").innerHTML;
+        const get_pair_1 = document.querySelector("#p1 .moves-counter").innerText;
+        const get_pair_2 = document.querySelector("#p2 .moves-counter").innerText;
         
         p1_pair.innerText = `${get_pair_1} Pairs`;
         
         p2_pair.innerText = `${get_pair_2} Pairs`;
 
-        if (get_pair_1 > get_pair_2) {
+        let pair_in_numb_1 = parseFloat(get_pair_1);
+        let pair_in_numb_2 = parseFloat(get_pair_2);
+
+        if (pair_in_numb_1 > pair_in_numb_2) {
+          console.log("this is not else");
+          console.log(get_pair_1);
+          console.log(get_pair_2);
           let winner;
           winner = "1";
           winner_target.innerText = `Player ${winner} Wins!`;
@@ -145,6 +151,9 @@ const html_generieren_numbers_1p_4x4 = function () {
           
           
         } else {
+          console.log("this is else");
+          console.log(get_pair_1);
+          console.log(get_pair_2);
           let winner_2
           winner_2 = "2";
           winner_target.innerText = `Player ${winner_2} Wins!`;
@@ -195,8 +204,8 @@ const html_generieren_numbers_1p_4x4 = function () {
     } else {
       finish_menu();
       setTimeout(function () {
-        check_pair();
-      }, 200);
+      check_pair();
+      }, 300);
     }
 
   }

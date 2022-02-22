@@ -135,7 +135,13 @@ const html_generieren_numbers_1p_4x4 = function () {
         
         p2_pair.innerText = `${get_pair_2} Pairs`;
 
-        if (get_pair_1 > get_pair_2) {
+        let pair_in_numb_1 = parseFloat(get_pair_1);
+        let pair_in_numb_2 = parseFloat(get_pair_2);
+
+        if (pair_in_numb_1 > pair_in_numb_2) {
+          console.log("this is not else");
+          console.log(get_pair_1);
+          console.log(get_pair_2);
           let winner;
           winner = "1";
           winner_target.innerText = `Player ${winner} Wins!`;
@@ -145,12 +151,16 @@ const html_generieren_numbers_1p_4x4 = function () {
           
           
         } else {
+          console.log("this is else");
+          console.log(get_pair_1);
+          console.log(get_pair_2);
           let winner_2
           winner_2 = "2";
           winner_target.innerText = `Player ${winner_2} Wins!`;
           winner_pair_bg_2.style.backgroundColor = "#152938";
           p2_pair.style.setProperty("color", "#FFF", "important");
           p2_pair_header_2.style.setProperty("color", "#FFF", "important");
+
         }
      
   }
