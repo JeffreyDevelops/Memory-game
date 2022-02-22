@@ -194,7 +194,9 @@ const html_generieren_numbers_1p_4x4 = function () {
       tie_checker();
     } else {
       finish_menu();
-      check_pair();
+      setTimeout(function () {
+        check_pair();
+      }, 200);
     }
 
   }
