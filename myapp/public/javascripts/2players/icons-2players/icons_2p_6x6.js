@@ -311,7 +311,7 @@ const html_generieren_numbers_1p_4x4 = function () {
        let pair_target_2 = document.querySelector(".moves:nth-of-type(2) .moves-counter");
 
         if (flip_cards.length === 2) {
-          if (orange_cards.length === 16) {
+          if (orange_cards.length === 36) {
             setTimeout(function () {
               finish_game_mechanics();
             }, 500);
