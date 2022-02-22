@@ -825,6 +825,27 @@ body {
 
 }
 
+@media (min-width: 1440px) {
+    .moves {
+        padding: 0.2rem 5.3rem 1.3rem 1.5rem;
+        position: relative;
+        border-radius: 0.3rem;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .moves-header {
+        top: 0.7rem;
+        right: 1rem;
+    }
+
+    .moves-counter {
+        left: 4.5rem;
+        top: 0.7rem;
+    }
+}
+
+
 @media (min-width: 1920px) {
 
     .flipCard {
