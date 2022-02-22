@@ -417,7 +417,7 @@ body {
     }
 
     #data {
-        margin-top: 3rem;
+        margin-top: 0;
         display: flex;
         gap: 1.5rem;
         justify-content: center;
@@ -561,7 +561,7 @@ body {
 /* === DATA === */
 
 #data {
-    margin-top: 8rem;
+    margin-top: 80px;
     display: flex;
     gap: 1.3rem;
     justify-content: center;
