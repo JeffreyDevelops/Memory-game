@@ -145,7 +145,7 @@ const html_generieren_numbers_1p_4x4 = function () {
 }
 
   // tie -- checks if pairs are the same amount
-  const tie = function () {
+  const finish_game_mechanics = function () {
     const get_pair_1 = document.querySelector("#p1 .moves-counter").innerHTML;
     const get_pair_2 = document.querySelector("#p2 .moves-counter").innerHTML;
 
@@ -273,7 +273,7 @@ const html_generieren_numbers_1p_4x4 = function () {
         if (flip_cards.length === 2) {
           if (orange_cards.length === 16) {
             setTimeout(function () {
-              tie();
+              finish_game_mechanics();
             }, 500);
 
             setTimeout(function () {
