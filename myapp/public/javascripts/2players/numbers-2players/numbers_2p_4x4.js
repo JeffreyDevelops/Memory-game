@@ -65,11 +65,11 @@ const html_generieren_numbers_1p_4x4 = function () {
       <span class="moves-header"><span class="p2-desktop">P2</span><span class="p2-mobile">Player 2</span></span>
       <span class="moves-counter">0</span>
     </div>
-    <div class="moves">
+    <div id="p3" class="moves">
       <span class="moves-header"><span class="p3-desktop">P3</span><span class="p3-mobile">Player 3</span></span>
       <span class="moves-counter">/</span>
     </div>
-    <div class="moves">
+    <div id="p4" class="moves">
       <span class="moves-header"><span class="p4-desktop">P4</span><span class="p4-mobile">Player 4</span></span>
       <span class="moves-counter">/</span>
     </div>
@@ -79,10 +79,8 @@ const html_generieren_numbers_1p_4x4 = function () {
   
   }
 
-
+  // Check finish pairs for finish_menu
   const check_pair = function () {
-    
-      
         let winner_pair_bg_1 = document.querySelector("#finish-moves:nth-of-type(1)");
         let winner_pair_bg_2 = document.querySelector("#finish-moves:nth-of-type(2)");
         let winner_target = document.querySelector("#finish-header");
@@ -117,9 +115,86 @@ const html_generieren_numbers_1p_4x4 = function () {
      
   }
 
+
+  // Check if players have the same amount of pairs
+  const tie_checker = function () {
+    let winner_pair_bg_1 = document.querySelector("#finish-moves:nth-of-type(1)");
+    let winner_pair_bg_2 = document.querySelector("#finish-moves:nth-of-type(2)");
+    let winner_target = document.querySelector("#finish-header");
+    let p1_pair_header_1 = document.querySelector("#finish-moves:nth-of-type(1) span:nth-of-type(1)");
+    let p2_pair_header_2 = document.querySelector("#finish-moves:nth-of-type(2) span:nth-of-type(1)");
+    let p1_pair = document.querySelector("#finish-moves:nth-of-type(1) span:nth-of-type(2)");
+    let p2_pair = document.querySelector("#finish-moves:nth-of-type(2) span:nth-of-type(2)");
+    const get_pair_1 = document.querySelector("#p1 .moves-counter").innerHTML;
+    const get_pair_2 = document.querySelector("#p2 .moves-counter").innerHTML;
+    
+    p1_pair.innerText = `${get_pair_1} Pairs`;
+    
+    p2_pair.innerText = `${get_pair_2} Pairs`;
+
+    if (get_pair_1 === get_pair_2) {
+      winner_target.innerText = `It's a tie!`;
+      winner_pair_bg_1.style.backgroundColor = "#152938";
+      winner_pair_bg_2.style.backgroundColor = "#152938";
+      p1_pair_header_1.style.setProperty("color", "#FFF", "important");
+      p2_pair_header_2.style.setProperty("color", "#FFF", "important");
+      p1_pair.style.setProperty("color", "#FFF", "important");
+      p2_pair.style.setProperty("color", "#FFF", "important");
+    } 
+ 
+}
+
+  // tie -- checks if pairs are the same amount
+  const tie = function () {
+    const get_pair_1 = document.querySelector("#p1 .moves-counter").innerHTML;
+    const get_pair_2 = document.querySelector("#p2 .moves-counter").innerHTML;
+
+    if (get_pair_1 === get_pair_2) {
+      tie_menu();
+      tie_checker();
+    } else {
+      finish_menu();
+      check_pair();
+    }
+
+  }
+
  
   // Finish-Menu
     const finish_menu = function () {
+      let get_doc = document.querySelector("#game-numbers-solo-4x4");
+      
+      let finish_menu = document.createElement("div");
+      finish_menu.setAttribute("id", "finish-outside");
+      finish_menu.innerHTML = `<div id="finish-screen">
+      <div>
+      <h1 id="finish-header"></h1>
+      <p id="finish-text">Game over! Here are the results...<p>
+      </div>
+
+      <div id="finish-stats">
+      <div id="finish-moves">
+      <span>Player 1</span>
+      <span></span>
+      </div>
+
+      <div id="finish-moves">
+      <span>Player 2</span>
+      <span></span>
+      </div>
+
+      <div id="finish-buttons">
+      <button id="finish-restart-button">Restart</button>
+      <button id="finish-new-game-button">Setup New Game</button>
+      </div>`
+      
+        get_doc.insertAdjacentElement("afterbegin", finish_menu);
+      
+      
+    }
+
+    // Tie-Menu
+    const tie_menu = function () {
       let get_doc = document.querySelector("#game-numbers-solo-4x4");
       
       let finish_menu = document.createElement("div");
@@ -177,7 +252,12 @@ const html_generieren_numbers_1p_4x4 = function () {
     let color_call = document.querySelector("#p1");
     color_call.style.backgroundColor = "orange";
     let color_call_2 = document.querySelector("#p2");
-   
+    let pair_header_p1 = document.querySelector("#p1 .moves-header");
+    pair_header_p1.style.color = "#FFF";
+    let pair_header_p2 = document.querySelector("#p2 .moves-header");
+    let pair_counter_color_p1 = document.querySelector("#p1 .moves-counter");
+    let pair_counter_color_p2 = document.querySelector("#p2 .moves-counter");
+   pair_counter_color_p1.style.color = "#FFF";
     let card_target = document.querySelector("#game-grid-number-solo-4x4");
     card_target.addEventListener("click", e =>{
       if (e.target.classList.contains("game-flex")) {
@@ -193,12 +273,8 @@ const html_generieren_numbers_1p_4x4 = function () {
         if (flip_cards.length === 2) {
           if (orange_cards.length === 16) {
             setTimeout(function () {
-              finish_menu();
+              tie();
             }, 500);
-
-            setTimeout(function () {
-              check_pair();
-            }, 600);
 
             setTimeout(function () {
               finish_restart();
@@ -221,9 +297,13 @@ const html_generieren_numbers_1p_4x4 = function () {
               
           } else if (flip_cards[0].innerText !== flip_cards[1].innerText && color_call.style.backgroundColor === "orange") {
             color_call.style.backgroundColor = "";
+            pair_counter_color_p1.style.color = "";
+            pair_header_p1.style.color = "";
             
               setTimeout(function () {
                 color_call_2.style.backgroundColor = "orange";
+                pair_counter_color_p2.style.color = "#FFF";
+                pair_header_p2.style.color = "#FFF";
               }, 200);
             
             setTimeout(function() {
@@ -247,9 +327,13 @@ const html_generieren_numbers_1p_4x4 = function () {
                 });
               } else if (flip_cards[0].innerText !== flip_cards[1].innerText && color_call_2.style.backgroundColor === "orange") {
                 color_call_2.style.backgroundColor = "";
+                pair_counter_color_p2.style.color = "";
+                pair_header_p2.style.color = "";
                 
                   setTimeout(function () {
                     color_call.style.backgroundColor = "orange";
+                    pair_counter_color_p1.style.color = "#FFF";
+                    pair_header_p1.style.color = "#FFF";
                   }, 200);
                 
                 setTimeout(function() {
