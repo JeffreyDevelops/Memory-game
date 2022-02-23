@@ -149,9 +149,6 @@ const html_generieren_numbers_1p_4x4 = function () {
           winner_pair_bg_3.style.backgroundColor = "#152938";
           p3_pair.style.setProperty("color", "#FFF", "important");
           p3_pair_header_3.style.setProperty("color", "#FFF", "important");
-          console.log(pair_in_numb_3)
-          console.log(pair_in_numb_2);
-          console.log(pair_in_numb_1);
         }  
         if (gethighest_numb === pair_in_numb_1 && gethighest_numb === pair_in_numb_2) {
           winner_target.innerText = `It's a tie!`
@@ -192,11 +189,7 @@ const html_generieren_numbers_1p_4x4 = function () {
 
   // tie -- checks if pairs are the same amount
   const finish_game_mechanics = function () {
-    const get_pair_1 = document.querySelector("#p1 .moves-counter").innerHTML;
-    const get_pair_2 = document.querySelector("#p2 .moves-counter").innerHTML;
-    const get_pair_3 = document.querySelector("#p3 .moves-counter").innerHTML;
 
-  
       finish_menu();
       setTimeout(function () {
         check_pair();
