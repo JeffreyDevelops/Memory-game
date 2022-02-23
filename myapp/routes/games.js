@@ -47,4 +47,29 @@ router.get('/icons-2players-6x6', function(req, res, next) {
   res.render("2players/icons-2players/icons_2p_6x6", {title: "Icons-2players-6x6"});
 });
 
+
+// === 3PLAYERS ===
+
+/* GET number-3players-4x4. */
+router.get('/numbers-3players-4x4', function(req, res, next) {
+  res.render("3players/numbers-3players/numbers_3p_4x4", {title: "Numbers-3players-4x4"});
+});
+
+/* GET number-3players-6x6. */
+router.get('/numbers-3players-6x6', function(req, res, next) {
+  res.render("3players/numbers-3players/numbers_3p_6x6", {title: "Numbers-3players-6x6"});
+});
+
+
+/* GET icons-3players-4x4. */
+router.get('/icons-3players-4x4', function(req, res, next) {
+  res.render("3players/icons-3players/icons_3p_4x4", {title: "Icons-3players-4x4"});
+});
+
+/* GET icons-3players-6x6. */
+router.get('/icons-3players-6x6', function(req, res, next) {
+  res.render("3players/icons-3players/icons_3p_6x6", {title: "Icons-3players-6x6"});
+});
+
+
 module.exports = router;

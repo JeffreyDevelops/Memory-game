@@ -21,8 +21,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 0;
-    align-items: center;
+    margin-top: 2rem;
 }
 
 .game-header-text span {
@@ -77,20 +76,18 @@ body {
 #game-grid-number-solo-4x4 {
     margin-top: 10rem;
     display: grid;
-    grid-template-rows: 75px 75px 75px 75px 75px 75px 75px;
-    grid-template-columns: 75px 75px 75px 75px 75px 75px;
+    grid-template-rows: 75px 75px 75px 75px;
+    grid-template-columns: 75px 75px 75px 75px;
     gap: .5rem;
 }
 
 #game-grid-number-solo-4x4 div {
     border-radius: 50%;
-    height: 0px;
-    width: 0px;
-    padding-top: 26px;
-    padding-bottom: 26px;
-    padding-left: 26px;
-    font-size: 5px;
-    padding-right: 26px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    font-size: 10px;
+    padding-right: 30px;
     border: none;
     font-weight: bold;
     background-color: #304859;
@@ -106,10 +103,10 @@ body {
     position: relative;
     background-color: #304859;
     backface-visibility: visible;
-    animation: mymove .5s;
+    animation:mymove .5s;
     transition-delay: .4s;
     text-indent: 1px!important;
-    font-size: 25px!important;
+    font-size: 30px!important;
     color: #FFF;
     pointer-events: none;
 }
@@ -123,7 +120,7 @@ body {
 /* === DATA === */
 
 #data {
-    margin-top: 3rem;
+    margin-top: 15rem;
     display: flex;
     gap: 1rem;
     justify-content: center;
@@ -165,10 +162,11 @@ body {
 .moves span {
    font-size: 12px;
    font-weight: bold;
-   color: #7191A5;
    position: relative;
-    bottom: .8rem;
+   bottom: 0.1rem;
 }
+
+
 
 /* === Menu onClick === */
 
@@ -372,6 +370,7 @@ body {
     cursor: pointer;
     font-weight: bold;
     font-size: 16px;
+    margin-top: .5rem;
 }
 
 #finish-new-game-button {
@@ -385,6 +384,7 @@ body {
     cursor: pointer;
     font-weight: bold;
     font-size: 16px;
+    margin-bottom: 1rem;
 }
 
 /* === MEDIA QUERIES === */
@@ -392,7 +392,7 @@ body {
 @media (min-width: 320px) {
     .game-header-text span {
         position: relative;
-        right: 6rem;
+        right: 4.5rem;
         font-size: 20px;
         font-weight: bold;
         color: #152938;
@@ -401,7 +401,7 @@ body {
     
     .game-menu-button button{
         position: relative;
-        left: 6rem;
+        left: 5rem;
         border: none;
         padding: .6rem 1.3rem .6rem 1.3rem;
         border-radius: 1rem;
@@ -410,33 +410,24 @@ body {
     }
 
     #game-grid-number-solo-4x4 {
-        margin-top: 1.5rem;
+        margin-top: 3rem;
         display: grid;
-        grid-template-rows: 65px 65px 65px 65px 65px 65px;
-        grid-template-columns: 48px 48px 48px 48px 48px 48px;
+        grid-template-rows: 65px 65px 65px 65px;
+        grid-template-columns: 65px 65px 65px 65px;
         gap: .3rem;
     }
 
     #data {
-        margin-top: 0;
+        margin-top: 3rem;
         display: flex;
-        gap: 4.5rem;
+        gap: 1.5rem;
         justify-content: center;
         
-    }
-
-    .time {
-        background-color: #F2F2F2;
-        padding: 1.5rem 3rem .6rem 3rem;
-        border-radius: .3rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
     }
     
     .moves {
         background-color: #F2F2F2;
-        padding: .5rem 3rem .5rem 3rem;
+        padding: 0.2rem 1.3rem 1.3rem 1.5rem;
         position: relative;
         border-radius: .3rem;
         display: flex;
@@ -452,6 +443,7 @@ body {
     .moves-header {
         position: relative;
         top: .4rem;
+        color: #7191A5;
     }
 
     .time-counter {
@@ -465,17 +457,39 @@ body {
         position: relative;
         top: .9rem;
         font-size: 20px!important;
-        color: #152938!important;
+        color: #152938;
     }
+
+    .p1-mobile {
+        display: none;
+    }
+    
+    .p2-mobile {
+        display: none;
+    }
+    
+    .p3-mobile {
+        display: none;
+    }
+    
+    .p4-mobile {
+        display: none;
+    }
+    
 
 }
 
 @media (min-width: 375px) {
     #game-grid-number-solo-4x4 {
-        margin-top: 1.5rem;
+        margin-top: 3rem;
         display: grid;
-        grid-template-rows: 75px 75px 75px 75px 75px 75px;
-        grid-template-columns: 55px 55px 55px 55px 55px 55px;
+        grid-template-rows: 75px 75px 75px 75px;
+        grid-template-columns: 75px 75px 75px 75px;
+        gap: .5rem;
+    }
+
+    #data {
+        margin-top: 3rem;
     }
 }
 
@@ -519,44 +533,20 @@ body {
         width: 110px;  
 }
 
-.flipCard {
-    position: relative;
-    background-color: #304859;
-    backface-visibility: visible;
-    animation: mymove .5s;
-    transition-delay: .4s;
-    text-indent: 1px!important;
-    font-size: 30px!important;
-    color: #FFF;
-    pointer-events: none;
-}
-
 #game-grid-number-solo-4x4 {
-    margin-top: 3rem;
+    margin-top: 8rem;
     display: grid;
-    grid-template-rows: 90px 90px 90px 90px 90px 90px;
-    grid-template-columns: 90px 90px 90px 90px 90px 90px;
-}
-
-#game-grid-number-solo-4x4 div {
-    border-radius: 50%;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    padding-left: 40px;
-    font-size: 10px;
-    padding-right: 40px;
-    border: none;
-    font-weight: bold;
-    background-color: #304859;
-    cursor: pointer;
+    grid-template-rows: 75px 75px 75px 75px;
+    grid-template-columns: 75px 75px 75px 75px;
+    gap: 1rem;
 }
 
 /* === DATA === */
 
 #data {
-    margin-top: 5rem;
+    margin-top: 8rem;
     display: flex;
-    gap: 11.3rem;
+    gap: 1.3rem;
     justify-content: center;
     
 }
@@ -605,37 +595,66 @@ body {
 
 .moves {
     background-color: #F2F2F2;
-    width: 100px;
-    border-radius: 0.5rem;
+    padding: 0.2rem 5.3rem 1.3rem 1.5rem;
+    position: relative;
+    border-radius: 0.3rem;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 7.5rem;
-    justify-content: center;
+    flex-direction: column;
 }
 
 .moves-header {
     position: relative;
-    top: .1rem;
-    left: .3rem;
+    top: 0.4rem;
+    right: 1rem;
 }
 
 
 .moves-counter {
     position: relative;
-    top: 0;
+    top: 0.9rem;
     font-size: 20px!important;
-    color: #152938!important;
-    right: .2rem;
+    color: #152938;
+    right: 2rem;
 }
 
 .moves span {
    font-size: 12px;
    font-weight: bold;
-   color: #7191A5;
    position: none;
    bottom: 0;
    
+}
+
+.p1-mobile {
+    display: inline-block;
+}
+
+.p2-mobile {
+    display: inline-block;
+}
+
+.p3-mobile {
+    display: inline-block;
+}
+
+.p4-mobile {
+    display: inline-block;
+}
+
+.p1-desktop {
+    display: none;
+}
+
+.p2-desktop {
+    display: none;
+}
+
+.p3-desktop {
+    display: none;
+}
+
+.p4-desktop {
+    display: none;
 }
 
 /* === finish screen === */
@@ -785,114 +804,39 @@ body {
     font-weight: bold;
     font-size: 16px;
     margin: 0;
-
 }
 
 }
 
-@media (min-width: 1920px) {
-
-    .flipCard {
-        position: relative;
-        background-color: #304859;
-        backface-visibility: visible;
-        animation: mymove .5s;
-        transition-delay: .4s;
-        text-indent: 1px!important;
-        font-size: 30px!important;
-        color: #FFF;
-        pointer-events: none;
-    }
-
-    #game-grid-number-solo-4x4 {
-        margin-top: 5rem;
-        display: grid;
-        grid-template-rows: 90px 90px 90px 90px 90px 90px;
-        grid-template-columns: 90px 90px 90px 90px 90px 90px;
-    }
-    
-    #game-grid-number-solo-4x4 div {
-        border-radius: 50%;
-        padding-top: 40px;
-        padding-bottom: 40px;
-        padding-left: 40px;
-        font-size: 10px;
-        padding-right: 40px;
-        border: none;
-        font-weight: bold;
-        background-color: #304859;
-        cursor: pointer;
-    }
-
-    
-    /* === DATA === */
-    
-    .time {
-        background-color: #F2F2F2;
-        width: 100px;
-        padding-top: 1.2rem;
-        padding-bottom: 1.2rem;
-        border-radius: .5rem;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .time span {
-        font-size: 12px;
-        font-weight: bold;
-        color: #7191A5;
-        position: none;
-        bottom: 0;
-        right: 0.4rem;
-     }
-
-    .time-header {
-        left: .5rem;
-    }
-    
-    .time-counter {
-        position: relative;
-        top: 0;
-        font-size: 20px!important;
-        color: #152938!important;
-        right: .2rem;
-    }
-
-    .bigger {
-        position: relative;
-        top: 0;
-        right: .2rem!important;
-        font-size: 22px!important;
-        color: #152938!important;
-    }
-    
+@media (min-width: 1440px) {
     .moves {
-        background-color: #F2F2F2;
-        width: 100px;
-        border-radius: 0.5rem;
+        padding: 0.2rem 5.3rem 1.3rem 1.5rem;
+        position: relative;
+        border-radius: 0.3rem;
         display: flex;
         flex-direction: row;
-        align-items: center;
-        gap: 7.5rem;
-        justify-content: center;
+    }
+
+    .moves-header {
+        top: 0.7rem;
+        right: 1rem;
     }
 
     .moves-counter {
-        position: relative;
-        top: 0;
-        font-size: 20px!important;
-        color: #152938!important;
-        right: .2rem;
-    }
-    
-    .moves span {
-       font-size: 12px;
-       font-weight: bold;
-       color: #7191A5;
-       position: none;
-        bottom: 0;
-       
+        left: 4.5rem;
+        top: 0.7rem;
     }
 }
+
+@media (min-width: 1920px) {
+    #game-grid-number-solo-4x4 {
+        margin-top: 5rem;
+        display: grid;
+        grid-template-rows: 75px 75px 75px 75px;
+        grid-template-columns: 75px 75px 75px 75px;
+        gap: 2rem;
+    }
+}
+
+
 
