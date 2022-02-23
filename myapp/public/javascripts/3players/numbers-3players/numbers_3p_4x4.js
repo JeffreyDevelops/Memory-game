@@ -103,7 +103,7 @@ const html_generieren_numbers_1p_4x4 = function () {
 
         let pair_in_numb_1 = parseFloat(get_pair_1);
         let pair_in_numb_2 = parseFloat(get_pair_2);
-        let pair_in_numb_3 = parseFloat(get_pair_2);
+        let pair_in_numb_3 = parseFloat(get_pair_3);
 
         if (pair_in_numb_1 > pair_in_numb_2 && pair_in_numb_1 > pair_in_numb_3) {
           console.log("this is not else");
@@ -146,9 +146,11 @@ const html_generieren_numbers_1p_4x4 = function () {
   const tie_checker = function () {
     let winner_pair_bg_1 = document.querySelector("#finish-moves:nth-of-type(1)");
     let winner_pair_bg_2 = document.querySelector("#finish-moves:nth-of-type(2)");
+    let winner_pair_bg_3 = document.querySelector("#finish-moves:nth-of-type(3)");
     let winner_target = document.querySelector("#finish-header");
     let p1_pair_header_1 = document.querySelector("#finish-moves:nth-of-type(1) span:nth-of-type(1)");
     let p2_pair_header_2 = document.querySelector("#finish-moves:nth-of-type(2) span:nth-of-type(1)");
+    let p3_pair_header_3 = document.querySelector("#finish-moves:nth-of-type(3) span:nth-of-type(1)");
     let p1_pair = document.querySelector("#finish-moves:nth-of-type(1) span:nth-of-type(2)");
     let p2_pair = document.querySelector("#finish-moves:nth-of-type(2) span:nth-of-type(2)");
     let p3_pair = document.querySelector("#finish-moves:nth-of-type(3) span:nth-of-type(2)");
@@ -162,7 +164,18 @@ const html_generieren_numbers_1p_4x4 = function () {
 
     p3_pair.innerText = `${get_pair_3} Pairs`;
 
-    if (get_pair_1 === get_pair_2) {
+    if (get_pair_1 === get_pair_2 === get_pair_3) {
+      winner_target.innerText = `It's a tie!`;
+      winner_pair_bg_1.style.backgroundColor = "#152938";
+      winner_pair_bg_2.style.backgroundColor = "#152938";
+      winner_pair_bg_3.style.backgroundColor = "#152938";
+      p1_pair_header_1.style.setProperty("color", "#FFF", "important");
+      p2_pair_header_2.style.setProperty("color", "#FFF", "important");
+      p3_pair_header_3.style.setProperty("color", "#FFF", "important");
+      p1_pair.style.setProperty("color", "#FFF", "important");
+      p2_pair.style.setProperty("color", "#FFF", "important");
+      p3_pair.style.setProperty("color", "#FFF", "important");
+    } else if (get_pair_1 === get_pair_2) {
       winner_target.innerText = `It's a tie!`;
       winner_pair_bg_1.style.backgroundColor = "#152938";
       winner_pair_bg_2.style.backgroundColor = "#152938";
@@ -170,7 +183,23 @@ const html_generieren_numbers_1p_4x4 = function () {
       p2_pair_header_2.style.setProperty("color", "#FFF", "important");
       p1_pair.style.setProperty("color", "#FFF", "important");
       p2_pair.style.setProperty("color", "#FFF", "important");
-    } 
+    } else if (get_pair_1 === get_pair_3){
+      winner_target.innerText = `It's a tie!`;
+      winner_pair_bg_1.style.backgroundColor = "#152938";
+      winner_pair_bg_3.style.backgroundColor = "#152938";
+      p1_pair_header_1.style.setProperty("color", "#FFF", "important");
+      p3_pair_header_3.style.setProperty("color", "#FFF", "important");
+      p1_pair.style.setProperty("color", "#FFF", "important");
+      p3_pair.style.setProperty("color", "#FFF", "important");
+    } else if(get_pair_2 === get_pair_3) {
+      winner_target.innerText = `It's a tie!`;
+      winner_pair_bg_2.style.backgroundColor = "#152938";
+      winner_pair_bg_3.style.backgroundColor = "#152938";
+      p2_pair_header_2.style.setProperty("color", "#FFF", "important");
+      p3_pair_header_3.style.setProperty("color", "#FFF", "important");
+      p2_pair.style.setProperty("color", "#FFF", "important");
+      p3_pair.style.setProperty("color", "#FFF", "important");
+    }
  
 }
 
@@ -180,7 +209,9 @@ const html_generieren_numbers_1p_4x4 = function () {
     const get_pair_2 = document.querySelector("#p2 .moves-counter").innerHTML;
     const get_pair_3 = document.querySelector("#p3 .moves-counter").innerHTML;
 
-    if (get_pair_1 === get_pair_2) {
+    if (get_pair_1 === get_pair_2 === get_pair_3 || 
+      get_pair_1 === get_pair_2 || get_pair_1 === get_pair_3
+      || get_pair_2 === get_pair_3) {
       tie_menu();
       tie_checker();
     } else {
