@@ -83,22 +83,29 @@ const html_generieren_numbers_1p_4x4 = function () {
   const check_pair = function () {
         let winner_pair_bg_1 = document.querySelector("#finish-moves:nth-of-type(1)");
         let winner_pair_bg_2 = document.querySelector("#finish-moves:nth-of-type(2)");
+        let winner_pair_bg_3 = document.querySelector("#finish-moves:nth-of-type(3)");
         let winner_target = document.querySelector("#finish-header");
         let p1_pair_header_1 = document.querySelector("#finish-moves:nth-of-type(1) span:nth-of-type(1)");
         let p2_pair_header_2 = document.querySelector("#finish-moves:nth-of-type(2) span:nth-of-type(1)");
+        let p3_pair_header_3 = document.querySelector("#finish-moves:nth-of-type(3) span:nth-of-type(1)");
         let p1_pair = document.querySelector("#finish-moves:nth-of-type(1) span:nth-of-type(2)");
         let p2_pair = document.querySelector("#finish-moves:nth-of-type(2) span:nth-of-type(2)");
+        let p3_pair = document.querySelector("#finish-moves:nth-of-type(3) span:nth-of-type(2)");
         const get_pair_1 = document.querySelector("#p1 .moves-counter").innerHTML;
         const get_pair_2 = document.querySelector("#p2 .moves-counter").innerHTML;
+        const get_pair_3 = document.querySelector("#p3 .moves-counter").innerHTML;
         
         p1_pair.innerText = `${get_pair_1} Pairs`;
         
         p2_pair.innerText = `${get_pair_2} Pairs`;
 
+        p3_pair.innerText = `${get_pair_3} Pairs`;
+
         let pair_in_numb_1 = parseFloat(get_pair_1);
         let pair_in_numb_2 = parseFloat(get_pair_2);
+        let pair_in_numb_3 = parseFloat(get_pair_2);
 
-        if (pair_in_numb_1 > pair_in_numb_2) {
+        if (pair_in_numb_1 > pair_in_numb_2 && pair_in_numb_1 > pair_in_numb_3) {
           console.log("this is not else");
           console.log(get_pair_1);
           console.log(get_pair_2);
@@ -110,7 +117,7 @@ const html_generieren_numbers_1p_4x4 = function () {
           p1_pair.style.setProperty("color", "#FFF", "important");
           
           
-        } else {
+        } else if (pair_in_numb_2 > pair_in_numb_1 && pair_in_numb_2 > pair_in_numb_3) {
           console.log("this is else");
           console.log(get_pair_1);
           console.log(get_pair_2);
@@ -121,6 +128,15 @@ const html_generieren_numbers_1p_4x4 = function () {
           p2_pair.style.setProperty("color", "#FFF", "important");
           p2_pair_header_2.style.setProperty("color", "#FFF", "important");
         }
+
+         if (pair_in_numb_3 > pair_in_numb_2 && pair_in_numb_3 > pair_in_numb_1) {
+          let winner_3
+          winner_3 = "3";
+          winner_target.innerText = `Player ${winner_3} Wins!`;
+          winner_pair_bg_3.style.backgroundColor = "#152938";
+          p3_pair.style.setProperty("color", "#FFF", "important");
+          p3_pair_header_3.style.setProperty("color", "#FFF", "important");
+         }
      
   }
 
@@ -135,12 +151,16 @@ const html_generieren_numbers_1p_4x4 = function () {
     let p2_pair_header_2 = document.querySelector("#finish-moves:nth-of-type(2) span:nth-of-type(1)");
     let p1_pair = document.querySelector("#finish-moves:nth-of-type(1) span:nth-of-type(2)");
     let p2_pair = document.querySelector("#finish-moves:nth-of-type(2) span:nth-of-type(2)");
+    let p3_pair = document.querySelector("#finish-moves:nth-of-type(3) span:nth-of-type(2)");
     const get_pair_1 = document.querySelector("#p1 .moves-counter").innerHTML;
     const get_pair_2 = document.querySelector("#p2 .moves-counter").innerHTML;
+    const get_pair_3 = document.querySelector("#p3 .moves-counter").innerHTML;
     
     p1_pair.innerText = `${get_pair_1} Pairs`;
     
     p2_pair.innerText = `${get_pair_2} Pairs`;
+
+    p3_pair.innerText = `${get_pair_3} Pairs`;
 
     if (get_pair_1 === get_pair_2) {
       winner_target.innerText = `It's a tie!`;
@@ -158,6 +178,7 @@ const html_generieren_numbers_1p_4x4 = function () {
   const finish_game_mechanics = function () {
     const get_pair_1 = document.querySelector("#p1 .moves-counter").innerHTML;
     const get_pair_2 = document.querySelector("#p2 .moves-counter").innerHTML;
+    const get_pair_3 = document.querySelector("#p3 .moves-counter").innerHTML;
 
     if (get_pair_1 === get_pair_2) {
       tie_menu();
@@ -193,6 +214,11 @@ const html_generieren_numbers_1p_4x4 = function () {
       <span></span>
       </div>
 
+      <div id="finish-moves">
+      <span>Player 3</span>
+      <span></span>
+      </div>
+
       <div id="finish-buttons">
       <button id="finish-restart-button">Restart</button>
       <button id="finish-new-game-button">Setup New Game</button>
@@ -223,6 +249,11 @@ const html_generieren_numbers_1p_4x4 = function () {
 
       <div id="finish-moves">
       <span>Player 2</span>
+      <span></span>
+      </div>
+
+      <div id="finish-moves">
+      <span>Player 3</span>
       <span></span>
       </div>
 
