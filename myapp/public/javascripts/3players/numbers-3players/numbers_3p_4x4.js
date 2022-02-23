@@ -233,23 +233,19 @@ const html_generieren_numbers_1p_4x4 = function () {
       <h1 id="finish-header"></h1>
       <p id="finish-text">Game over! Here are the results...<p>
       </div>
-
       <div id="finish-stats">
       <div id="finish-moves">
       <span>Player 1</span>
       <span></span>
       </div>
-
       <div id="finish-moves">
       <span>Player 2</span>
       <span></span>
       </div>
-
       <div id="finish-moves">
       <span>Player 3</span>
       <span></span>
       </div>
-
       <div id="finish-buttons">
       <button id="finish-restart-button">Restart</button>
       <button id="finish-new-game-button">Setup New Game</button>
@@ -271,23 +267,19 @@ const html_generieren_numbers_1p_4x4 = function () {
       <h1 id="finish-header"></h1>
       <p id="finish-text">Game over! Here are the results...<p>
       </div>
-
       <div id="finish-stats">
       <div id="finish-moves">
       <span>Player 1</span>
       <span></span>
       </div>
-
       <div id="finish-moves">
       <span>Player 2</span>
       <span></span>
       </div>
-
       <div id="finish-moves">
       <span>Player 3</span>
       <span></span>
       </div>
-
       <div id="finish-buttons">
       <button id="finish-restart-button">Restart</button>
       <button id="finish-new-game-button">Setup New Game</button>
