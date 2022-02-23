@@ -67,7 +67,7 @@ const html_generieren_numbers_1p_4x4 = function () {
     </div>
     <div id="p3" class="moves">
       <span class="moves-header"><span class="p3-desktop">P3</span><span class="p3-mobile">Player 3</span></span>
-      <span class="moves-counter">/</span>
+      <span class="moves-counter">0</span>
     </div>
     <div id="p4" class="moves">
       <span class="moves-header"><span class="p4-desktop">P4</span><span class="p4-mobile">Player 4</span></span>
@@ -259,14 +259,18 @@ const html_generieren_numbers_1p_4x4 = function () {
   const click_memory = function () {
     let pair = 0;
     let pair_2 = 0;
+    let pair_3 = 0;
     let color_call = document.querySelector("#p1");
     color_call.style.backgroundColor = "orange";
     let color_call_2 = document.querySelector("#p2");
+    let color_call_3 = document.querySelector("#p3");
     let pair_header_p1 = document.querySelector("#p1 .moves-header");
     pair_header_p1.style.color = "#FFF";
     let pair_header_p2 = document.querySelector("#p2 .moves-header");
+    let pair_header_p3 = document.querySelector("#p3 .moves-header");
     let pair_counter_color_p1 = document.querySelector("#p1 .moves-counter");
     let pair_counter_color_p2 = document.querySelector("#p2 .moves-counter");
+    let pair_counter_color_p3 = document.querySelector("#p3 .moves-counter");
    pair_counter_color_p1.style.color = "#FFF";
     let card_target = document.querySelector("#game-grid-number-solo-4x4");
     card_target.addEventListener("click", e =>{
@@ -279,6 +283,7 @@ const html_generieren_numbers_1p_4x4 = function () {
        const flip_cards = document.querySelectorAll(".flip");
        let pair_target = document.querySelector(".moves:nth-of-type(1) .moves-counter");
        let pair_target_2 = document.querySelector(".moves:nth-of-type(2) .moves-counter");
+       let pair_target_3 = document.querySelector(".moves:nth-of-type(3) .moves-counter");
 
         if (flip_cards.length === 2) {
           if (orange_cards.length === 16) {
@@ -341,9 +346,9 @@ const html_generieren_numbers_1p_4x4 = function () {
                 pair_header_p2.style.color = "";
                 
                   setTimeout(function () {
-                    color_call.style.backgroundColor = "orange";
-                    pair_counter_color_p1.style.color = "#FFF";
-                    pair_header_p1.style.color = "#FFF";
+                    color_call_3.style.backgroundColor = "orange";
+                    pair_counter_color_p3.style.color = "#FFF";
+                    pair_header_p3.style.color = "#FFF";
                   }, 200);
                 
                 setTimeout(function() {
@@ -353,6 +358,37 @@ const html_generieren_numbers_1p_4x4 = function () {
                    });
                 }, 1000);       
               }
+
+
+              if (flip_cards[0].innerText === flip_cards[1].innerText && color_call_3.style.backgroundColor === "orange") {
+                pair_3 ++;
+                pair_target_3.innerHTML = `${pair_3}`;
+                  setTimeout(e => {
+                    flip_cards.forEach(e => {
+                      e.style.backgroundColor = "orange";
+                      });
+                  }, 200);
+                  flip_cards.forEach(e => {
+                    e.classList.remove("flip");
+                    });
+                  } else if (flip_cards[0].innerText !== flip_cards[1].innerText && color_call_3.style.backgroundColor === "orange") {
+                    color_call_3.style.backgroundColor = "";
+                    pair_counter_color_p3.style.color = "";
+                    pair_header_p3.style.color = "";
+                    
+                      setTimeout(function () {
+                        color_call.style.backgroundColor = "orange";
+                        pair_counter_color_p1.style.color = "#FFF";
+                        pair_header_p1.style.color = "#FFF";
+                      }, 200);
+                    
+                    setTimeout(function() {
+                      flip_cards.forEach(e => {
+                       e.classList.remove("flipCard");
+                       e.classList.remove("flip");
+                       });
+                    }, 1000);       
+                  }
                   
 
         } else if (flip_cards.length > 3) {
