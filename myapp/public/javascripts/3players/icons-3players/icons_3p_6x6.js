@@ -186,21 +186,24 @@ const html_generieren_numbers_1p_4x4 = function () {
         if (pair_in_numb_1 > pair_in_numb_2 && pair_in_numb_1 > pair_in_numb_3) {
           let winner;
           winner = "1";
+          p1_pair_winner.innerText = `Player 1 ` + "{Winner!}";
           winner_target.innerText = `Player ${winner} Wins!`;
           winner_pair_bg_1.style.backgroundColor = "#152938";
           p1_pair_header_1.style.setProperty("color", "#FFF", "important");
           p1_pair.style.setProperty("color", "#FFF", "important"); 
         } else if (pair_in_numb_2 > pair_in_numb_1 && pair_in_numb_2 > pair_in_numb_3) {
-          let winner_2
+          let winner_2;
           winner_2 = "2";
+          p2_pair_winner.innerText = `Player 2 ` + "{Winner!}";
           winner_target.innerText = `Player ${winner_2} Wins!`;
           winner_pair_bg_2.style.backgroundColor = "#152938";
           p2_pair.style.setProperty("color", "#FFF", "important");
           p2_pair_header_2.style.setProperty("color", "#FFF", "important");
         }
          if (pair_in_numb_3 > pair_in_numb_2 && pair_in_numb_3 > pair_in_numb_1) {
-          let winner_3
+          let winner_3;
           winner_3 = "3";
+          p3_pair_winner.innerText = `Player 3 ` + "{Winner!}";
           winner_target.innerText = `Player ${winner_3} Wins!`;
           winner_pair_bg_3.style.backgroundColor = "#152938";
           p3_pair.style.setProperty("color", "#FFF", "important");
