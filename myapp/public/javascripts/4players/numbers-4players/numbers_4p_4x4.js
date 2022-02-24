@@ -109,25 +109,40 @@ const html_generieren_numbers_1p_4x4 = function () {
     target_order.insertAdjacentElement("afterbegin", pair_3);
   }
 
+  const pair_stats_4 = function () {
+    let target_order = document.querySelector("#finish-stats");
+    let pair_4 = document.createElement("div");
+    pair_4.setAttribute("id", "finish-moves");
+    pair_4.setAttribute("class", "p3-moves");
+    pair_4.innerHTML = `<span>Player 3</span>
+    <span></span>`;
+    target_order.insertAdjacentElement("afterbegin", pair_4);
+  }
+
 
   // Check finish pairs for finish_menu / with tie
   const check_pair = function () {
         let winner_pair_bg_1 = document.querySelector(".p1-moves");
         let winner_pair_bg_2 = document.querySelector(".p2-moves");
         let winner_pair_bg_3 = document.querySelector(".p3-moves");
+        let winner_pair_bg_4 = document.querySelector(".p4-moves");
         let winner_target = document.querySelector("#finish-header");
         let p1_pair_header_1 = document.querySelector(".p1-moves span:nth-of-type(1)");
         let p2_pair_header_2 = document.querySelector(".p2-moves span:nth-of-type(1)");
         let p3_pair_header_3 = document.querySelector(".p3-moves span:nth-of-type(1)");
+        let p4_pair_header_4 = document.querySelector(".p4-moves span:nth-of-type(1)");
         let p1_pair = document.querySelector(".p1-moves span:nth-of-type(2)");
         let p2_pair = document.querySelector(".p2-moves span:nth-of-type(2)");
         let p3_pair = document.querySelector(".p3-moves span:nth-of-type(2)");
+        let p4_pair = document.querySelector(".p4-moves span:nth-of-type(2)");
         let p1_pair_winner = document.querySelector(".p1-moves span:nth-of-type(1)");
         let p2_pair_winner = document.querySelector(".p2-moves span:nth-of-type(1)");
         let p3_pair_winner = document.querySelector(".p3-moves span:nth-of-type(1)");
+        let p4_pair_winner = document.querySelector(".p4-moves span:nth-of-type(1)");
         const get_pair_1 = document.querySelector("#p1 .moves-counter").innerHTML;
         const get_pair_2 = document.querySelector("#p2 .moves-counter").innerHTML;
         const get_pair_3 = document.querySelector("#p3 .moves-counter").innerHTML;
+        const get_pair_4 = document.querySelector("#p4 .moves-counter").innerHTML;
         
 
         p1_pair.innerText = `${get_pair_1} Pairs`;
@@ -135,15 +150,18 @@ const html_generieren_numbers_1p_4x4 = function () {
         p2_pair.innerText = `${get_pair_2} Pairs`;
 
         p3_pair.innerText = `${get_pair_3} Pairs`;
+
+        p4_pair.innerText = `${get_pair_3} Pairs`;
         
 
         let pair_in_numb_1 = parseFloat(get_pair_1);
         let pair_in_numb_2 = parseFloat(get_pair_2);
         let pair_in_numb_3 = parseFloat(get_pair_3);
+        let pair_in_numb_4 = parseFloat(get_pair_4);
 
-        let gethighest_numb = Math.max(pair_in_numb_1, pair_in_numb_2, pair_in_numb_3);
+        let gethighest_numb = Math.max(pair_in_numb_1, pair_in_numb_2, pair_in_numb_3, pair_in_numb_4);
 
-        if (pair_in_numb_1 > pair_in_numb_2 && pair_in_numb_1 > pair_in_numb_3) {
+        if (pair_in_numb_1 > pair_in_numb_2 && pair_in_numb_1 > pair_in_numb_3 && pair_in_numb_1 > pair_in_numb_4) {
           let winner;
           winner = "1";
           p1_pair_winner.innerText = `Player 1 ` + "{Winner!}";
@@ -151,7 +169,7 @@ const html_generieren_numbers_1p_4x4 = function () {
           winner_pair_bg_1.style.backgroundColor = "#152938";
           p1_pair_header_1.style.setProperty("color", "#FFF", "important");
           p1_pair.style.setProperty("color", "#FFF", "important"); 
-        } else if (pair_in_numb_2 > pair_in_numb_1 && pair_in_numb_2 > pair_in_numb_3) {
+        } else if (pair_in_numb_2 > pair_in_numb_1 && pair_in_numb_2 > pair_in_numb_3 && pair_in_numb_2 > pair_in_numb_4) {
           let winner_2;
           winner_2 = "2";
           p2_pair_winner.innerText = `Player 2 ` + "{Winner!}";
@@ -160,7 +178,7 @@ const html_generieren_numbers_1p_4x4 = function () {
           p2_pair.style.setProperty("color", "#FFF", "important");
           p2_pair_header_2.style.setProperty("color", "#FFF", "important");
         }
-         if (pair_in_numb_3 > pair_in_numb_2 && pair_in_numb_3 > pair_in_numb_1) {
+         if (pair_in_numb_3 > pair_in_numb_2 && pair_in_numb_3 > pair_in_numb_1 && pair_in_numb_3 > pair_in_numb_4) {
           let winner_3;
           winner_3 = "3";
           p3_pair_winner.innerText = `Player 3 ` + "{Winner!}";
@@ -169,22 +187,34 @@ const html_generieren_numbers_1p_4x4 = function () {
           p3_pair.style.setProperty("color", "#FFF", "important");
           p3_pair_header_3.style.setProperty("color", "#FFF", "important");
          }
-        if (gethighest_numb === pair_in_numb_1 && gethighest_numb === pair_in_numb_2 && gethighest_numb === pair_in_numb_3) {
+         if (pair_in_numb_4 > pair_in_numb_1 && pair_in_numb_4 > pair_in_numb_2 && pair_in_numb_4 > pair_in_numb_3) {
+          let winner_4;
+          winner_4 = "4";
+          p4_pair_winner.innerText = `Player 4 ` + "{Winner!}";
+          winner_target.innerText = `Player ${winner_4} Wins!`;
+          winner_pair_bg_4.style.backgroundColor = "#152938";
+          p4_pair.style.setProperty("color", "#FFF", "important");
+          p4_pair_header_4.style.setProperty("color", "#FFF", "important");
+         }
+        if (gethighest_numb === pair_in_numb_1 && gethighest_numb === pair_in_numb_2 && gethighest_numb === pair_in_numb_3 && 
+          gethighest_numb === pair_in_numb_4) {
           winner_target.innerText = `It's a tie!`;
           p1_pair_winner.innerText = `Player 1 ` + "{Winner!}";
           winner_pair_bg_1.style.backgroundColor = "#152938";
           p1_pair_header_1.style.setProperty("color", "#FFF", "important");
           p1_pair.style.setProperty("color", "#FFF", "important");
-          winner_target.innerText = `It's a tie!`;
           p2_pair_winner.innerText = `Player 2 ` + "{Winner!}";
           winner_pair_bg_2.style.backgroundColor = "#152938";
           p2_pair.style.setProperty("color", "#FFF", "important");
           p2_pair_header_2.style.setProperty("color", "#FFF", "important");
-          winner_target.innerText = `It's a tie!`;
           p3_pair_winner.innerText = `Player 3 ` + "{Winner!}";
           winner_pair_bg_3.style.backgroundColor = "#152938";
           p3_pair.style.setProperty("color", "#FFF", "important");
           p3_pair_header_3.style.setProperty("color", "#FFF", "important");
+          p4_pair_winner.innerText = `Player 4 ` + "{Winner!}";
+          winner_pair_bg_4.style.backgroundColor = "#152938";
+          p4_pair.style.setProperty("color", "#FFF", "important");
+          p4_pair_header_4.style.setProperty("color", "#FFF", "important");
         }  
         if (gethighest_numb === pair_in_numb_1 && gethighest_numb === pair_in_numb_2) {
           winner_target.innerText = `It's a tie!`;
@@ -192,12 +222,10 @@ const html_generieren_numbers_1p_4x4 = function () {
           winner_pair_bg_1.style.backgroundColor = "#152938";
           p1_pair_header_1.style.setProperty("color", "#FFF", "important");
           p1_pair.style.setProperty("color", "#FFF", "important");
-          winner_target.innerText = `It's a tie!`;
           p2_pair_winner.innerText = `Player 2 ` + "{Winner!}";
           winner_pair_bg_2.style.backgroundColor = "#152938";
           p2_pair.style.setProperty("color", "#FFF", "important");
           p2_pair_header_2.style.setProperty("color", "#FFF", "important");
-
         }
         if (gethighest_numb === pair_in_numb_1 && gethighest_numb === pair_in_numb_3) {
           winner_target.innerText = `It's a tie!`;
@@ -209,9 +237,6 @@ const html_generieren_numbers_1p_4x4 = function () {
           winner_pair_bg_3.style.backgroundColor = "#152938";
           p3_pair.style.setProperty("color", "#FFF", "important");
           p3_pair_header_3.style.setProperty("color", "#FFF", "important");
-            
-          
-          
         }
         if (gethighest_numb === pair_in_numb_2 && gethighest_numb === pair_in_numb_3) {
           winner_target.innerText = `It's a tie!`;
@@ -223,8 +248,84 @@ const html_generieren_numbers_1p_4x4 = function () {
           winner_pair_bg_3.style.backgroundColor = "#152938";
           p3_pair.style.setProperty("color", "#FFF", "important");
           p3_pair_header_3.style.setProperty("color", "#FFF", "important");
-          
         } 
+        if (gethighest_numb === pair_in_numb_1 && gethighest_numb === pair_in_numb_4) {
+          winner_target.innerText = `It's a tie!`;
+          p1_pair_winner.innerText = `Player 1 ` + "{Winner!}";
+          winner_pair_bg_1.style.backgroundColor = "#152938";
+          p1_pair_header_1.style.setProperty("color", "#FFF", "important");
+          p1_pair.style.setProperty("color", "#FFF", "important");
+          p4_pair_winner.innerText = `Player 4 ` + "{Winner!}";
+          winner_pair_bg_4.style.backgroundColor = "#152938";
+          p4_pair.style.setProperty("color", "#FFF", "important");
+          p4_pair_header_4.style.setProperty("color", "#FFF", "important");
+        }
+        if (gethighest_numb === pair_in_numb_2 && gethighest_numb === pair_in_numb_4) {
+          winner_target.innerText = `It's a tie!`;
+          p2_pair_winner.innerText = `Player 2 ` + "{Winner!}";
+          winner_pair_bg_2.style.backgroundColor = "#152938";
+          p2_pair.style.setProperty("color", "#FFF", "important");
+          p2_pair_header_2.style.setProperty("color", "#FFF", "important");
+          p4_pair_winner.innerText = `Player 4 ` + "{Winner!}";
+          winner_pair_bg_4.style.backgroundColor = "#152938";
+          p4_pair.style.setProperty("color", "#FFF", "important");
+          p4_pair_header_4.style.setProperty("color", "#FFF", "important");
+        }
+        if (gethighest_numb === pair_in_numb_3 && gethighest_numb === pair_in_numb_4) {
+          winner_target.innerText = `It's a tie!`;
+          p3_pair_winner.innerText = `Player 3 ` + "{Winner!}";
+          winner_pair_bg_3.style.backgroundColor = "#152938";
+          p3_pair.style.setProperty("color", "#FFF", "important");
+          p3_pair_header_3.style.setProperty("color", "#FFF", "important");
+          p4_pair_winner.innerText = `Player 4 ` + "{Winner!}";
+          winner_pair_bg_4.style.backgroundColor = "#152938";
+          p4_pair.style.setProperty("color", "#FFF", "important");
+          p4_pair_header_4.style.setProperty("color", "#FFF", "important");
+        }
+        if (gethighest_numb === pair_in_numb_2 && gethighest_numb === pair_in_numb_3 && gethighest_numb === pair_in_numb_4) {
+          winner_target.innerText = `It's a tie!`;
+          p2_pair_winner.innerText = `Player 2 ` + "{Winner!}";
+          winner_pair_bg_2.style.backgroundColor = "#152938";
+          p2_pair_header_2.style.setProperty("color", "#FFF", "important");
+          p2_pair.style.setProperty("color", "#FFF", "important");
+          p3_pair_winner.innerText = `Player 3 ` + "{Winner!}";
+          winner_pair_bg_3.style.backgroundColor = "#152938";
+          p3_pair_header_3.style.setProperty("color", "#FFF", "important");
+          p3_pair.style.setProperty("color", "#FFF", "important");
+          p4_pair_winner.innerText = `Player 4 ` + "{Winner!}";
+          winner_pair_bg_4.style.backgroundColor = "#152938";
+          p4_pair_header_4.style.setProperty("color", "#FFF", "important");
+          p4_pair.style.setProperty("color", "#FFF", "important");
+        } else if (gethighest_numb === pair_in_numb_1 && gethighest_numb === pair_in_numb_2 && gethighest_numb === pair_in_numb_4) {
+          winner_target.innerText = `It's a tie!`;
+          p1_pair_winner.innerText = `Player 1 ` + "{Winner!}";
+          winner_pair_bg_1.style.backgroundColor = "#152938";
+          p1_pair_header_1.style.setProperty("color", "#FFF", "important");
+          p1_pair.style.setProperty("color", "#FFF", "important");
+          p2_pair_winner.innerText = `Player 2 ` + "{Winner!}";
+          winner_pair_bg_2.style.backgroundColor = "#152938";
+          p2_pair_header_2.style.setProperty("color", "#FFF", "important");
+          p2_pair.style.setProperty("color", "#FFF", "important");
+          p4_pair_winner.innerText = `Player 4 ` + "{Winner!}";
+          winner_pair_bg_4.style.backgroundColor = "#152938";
+          p4_pair_header_4.style.setProperty("color", "#FFF", "important");
+          p4_pair.style.setProperty("color", "#FFF", "important");
+        } else if (gethighest_numb === pair_in_numb_3 && gethighest_numb === pair_in_numb_1 && gethighest_numb === pair_in_numb_4) {
+          winner_target.innerText = `It's a tie!`;
+          p3_pair_winner.innerText = `Player 3 ` + "{Winner!}";
+          winner_pair_bg_3.style.backgroundColor = "#152938";
+          p3_pair_header_3.style.setProperty("color", "#FFF", "important");
+          p3_pair.style.setProperty("color", "#FFF", "important");
+          p1_pair_winner.innerText = `Player 1 ` + "{Winner!}";
+          winner_pair_bg_1.style.backgroundColor = "#152938";
+          p1_pair_header_1.style.setProperty("color", "#FFF", "important");
+          p1_pair.style.setProperty("color", "#FFF", "important");
+          p4_pair_winner.innerText = `Player 4 ` + "{Winner!}";
+          winner_pair_bg_4.style.backgroundColor = "#152938";
+          p4_pair_header_4.style.setProperty("color", "#FFF", "important");
+          p4_pair.style.setProperty("color", "#FFF", "important");
+        }
+
   }
 
   // tie -- checks if pairs are the same amount
@@ -232,13 +333,17 @@ const html_generieren_numbers_1p_4x4 = function () {
     const get_pair_1 = document.querySelector("#p1 .moves-counter").innerHTML;
     const get_pair_2 = document.querySelector("#p2 .moves-counter").innerHTML;
     const get_pair_3 = document.querySelector("#p3 .moves-counter").innerHTML;
+    const get_pair_4 = document.querySelector("#p4 .moves-counter").innerHTML;
     let pair_in_numb_1 = parseFloat(get_pair_1);
     let pair_in_numb_2 = parseFloat(get_pair_2);
     let pair_in_numb_3 = parseFloat(get_pair_3);
-    let gethighest_numb = Math.max(pair_in_numb_1, pair_in_numb_2, pair_in_numb_3);
+    let pair_in_numb_4 = parseFloat(get_pair_4);
+    let gethighest_numb = Math.max(pair_in_numb_1, pair_in_numb_2, pair_in_numb_3, pair_in_numb_4);
 
       finish_menu();
-      if (gethighest_numb === pair_in_numb_1 && gethighest_numb === pair_in_numb_2 && gethighest_numb === pair_in_numb_3) {
+      if (gethighest_numb === pair_in_numb_1 && gethighest_numb === pair_in_numb_2 && gethighest_numb === pair_in_numb_3 && 
+        gethighest_numb === pair_in_numb_4) {
+        pair_stats_4();
         pair_stats_3();
         pair_stats_2();
         pair_stats_1();
@@ -246,28 +351,57 @@ const html_generieren_numbers_1p_4x4 = function () {
       if (gethighest_numb === pair_in_numb_1 && gethighest_numb === pair_in_numb_2 || 
         pair_in_numb_1 > pair_in_numb_2 && pair_in_numb_1 > pair_in_numb_3 || 
         pair_in_numb_2 > pair_in_numb_1 && pair_in_numb_2 > pair_in_numb_3 ||
-        pair_in_numb_3 > pair_in_numb_2 && pair_in_numb_3 > pair_in_numb_1) {
-      pair_stats_3();
-      pair_stats_2();
-      pair_stats_1();
+        pair_in_numb_3 > pair_in_numb_2 && pair_in_numb_3 > pair_in_numb_1 ||
+        pair_in_numb_4 > pair_in_numb_1 && pair_in_numb_4 > pair_in_numb_2 
+        && pair_in_numb_4 > pair_in_numb_3) {
+        pair_in_numb_4();
+        pair_stats_3();
+        pair_stats_2();
+        pair_stats_1();
       } else if (gethighest_numb === pair_in_numb_1 && gethighest_numb === pair_in_numb_3) {
-      pair_stats_2();
-      pair_stats_1();
-      pair_stats_3();
+        pair_stats_4();
+        pair_stats_2();
+        pair_stats_1();
+        pair_stats_3();
       } else if(gethighest_numb === pair_in_numb_2 && gethighest_numb === pair_in_numb_3) {
+        pair_stats_4();
         pair_stats_1();
         pair_stats_2();
         pair_stats_3();
-        
+      } else if (gethighest_numb === pair_in_numb_1 && gethighest_numb === pair_in_numb_4) {
+        pair_stats_2();
+        pair_stats_3();
+        pair_stats_4();
+        pair_stats_1();
+      } else if (gethighest_numb === pair_in_numb_2 && gethighest_numb === pair_in_numb_4) {
+        pair_stats_1();
+        pair_stats_3();
+        pair_stats_2();
+        pair_stats_4();
+      } else if (gethighest_numb === pair_in_numb_3 && gethighest_numb === pair_in_numb_4) {
+        pair_stats_1();
+        pair_stats_2();
+        pair_stats_3();
+        pair_stats_4();
+      } else if (gethighest_numb === pair_in_numb_2 && gethighest_numb === pair_in_numb_3 && gethighest_numb === pair_in_numb_4) {
+        pair_stats_1();
+        pair_stats_2();
+        pair_stats_3();
+        pair_stats_4();
+      } else if (gethighest_numb === pair_in_numb_1 && gethighest_numb === pair_in_numb_2 && gethighest_numb === pair_in_numb_4) {
+        pair_stats_3();
+        pair_stats_1();
+        pair_stats_2();
+        pair_stats_4();
+      } else if (gethighest_numb === pair_in_numb_3 && gethighest_numb === pair_in_numb_1 && gethighest_numb === pair_in_numb_4) {
+        pair_stats_2();
+        pair_stats_1();
+        pair_stats_3();
+        pair_stats_4();
       }
-
-      
-      
-      
       setTimeout(function () {
         check_pair();
       }, 200);
-      
   }
 
   // Finish-Menu
