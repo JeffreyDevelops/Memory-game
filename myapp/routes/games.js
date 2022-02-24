@@ -72,4 +72,28 @@ router.get('/icons-3players-6x6', function(req, res, next) {
 });
 
 
+// === 4PLAYERS ===
+
+/* GET number-4players-4x4. */
+router.get('/numbers-4players-4x4', function(req, res, next) {
+  res.render("4players/numbers-4players/numbers_4p_4x4", {title: "Numbers-4players-4x4"});
+});
+
+/* GET number-4players-6x6. */
+router.get('/numbers-4players-6x6', function(req, res, next) {
+  res.render("4players/numbers-4players/numbers_4p_6x6", {title: "Numbers-4players-6x6"});
+});
+
+
+/* GET icons-4players-4x4. */
+router.get('/icons-4players-4x4', function(req, res, next) {
+  res.render("4players/icons-4players/icons_4p_4x4", {title: "Icons-4players-4x4"});
+});
+
+/* GET icons-4players-6x6. */
+router.get('/icons-4players-6x6', function(req, res, next) {
+  res.render("4players/icons-4players/icons_4p_6x6", {title: "Icons-4players-6x6"});
+});
+
+
 module.exports = router;

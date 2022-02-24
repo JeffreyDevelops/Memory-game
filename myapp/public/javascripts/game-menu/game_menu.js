@@ -173,6 +173,20 @@ const start_game = function () {
     } else if (theme_icon.hasAttribute("id") && p_3.hasAttribute("id") && sixxsix.hasAttribute("id")) {
       location.href = "/solo_1_4x4/icons-3players-6x6";
     }
+
+
+    // === 4PLAYERS === //
+    if (theme_numbers.hasAttribute("id") && p_4.hasAttribute("id") && fourxfour.hasAttribute("id")) {
+      location.href = "/solo_1_4x4/numbers-4players-4x4";
+    } else if (theme_numbers.hasAttribute("id") && p_4.hasAttribute("id") && sixxsix.hasAttribute("id")) {
+      location.href = "/solo_1_4x4/numbers-4players-6x6";
+    }
+    
+    if (theme_icon.hasAttribute("id") && p_4.hasAttribute("id") && fourxfour.hasAttribute("id")) {
+      location.href = "/solo_1_4x4/icons-4players-4x4";
+    } else if (theme_icon.hasAttribute("id") && p_4.hasAttribute("id") && sixxsix.hasAttribute("id")) {
+      location.href = "/solo_1_4x4/icons-4players-6x6";
+    }
       
   });
 }
