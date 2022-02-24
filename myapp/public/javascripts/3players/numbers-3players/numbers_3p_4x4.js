@@ -129,13 +129,12 @@ const html_generieren_numbers_1p_4x4 = function () {
         const get_pair_2 = document.querySelector("#p2 .moves-counter").innerHTML;
         const get_pair_3 = document.querySelector("#p3 .moves-counter").innerHTML;
         
-        
+
         p1_pair.innerText = `${get_pair_1} Pairs`;
         
         p2_pair.innerText = `${get_pair_2} Pairs`;
 
         p3_pair.innerText = `${get_pair_3} Pairs`;
-        
         
 
         let pair_in_numb_1 = parseFloat(get_pair_1);
@@ -195,9 +194,7 @@ const html_generieren_numbers_1p_4x4 = function () {
           winner_pair_bg_2.style.backgroundColor = "#152938";
           p2_pair.style.setProperty("color", "#FFF", "important");
           p2_pair_header_2.style.setProperty("color", "#FFF", "important");
-          // setTimeout(function () {
-          //   pair_stats_1_delete();
-          // }, 300);
+
         }
         if (gethighest_numb === pair_in_numb_1 && gethighest_numb === pair_in_numb_3) {
           winner_target.innerText = `It's a tie!`
@@ -238,10 +235,11 @@ const html_generieren_numbers_1p_4x4 = function () {
     let gethighest_numb = Math.max(pair_in_numb_1, pair_in_numb_2, pair_in_numb_3);
 
       finish_menu();
-      if (gethighest_numb === pair_in_numb_1 && gethighest_numb === pair_in_numb_2 && gethighest_numb === pair_in_numb_3)
-      pair_stats_3();
-      pair_stats_2();
-      pair_stats_1();
+      if (gethighest_numb === pair_in_numb_1 && gethighest_numb === pair_in_numb_2 && gethighest_numb === pair_in_numb_3) {
+        pair_stats_3();
+        pair_stats_2();
+        pair_stats_1();
+        }
       if (gethighest_numb === pair_in_numb_1 && gethighest_numb === pair_in_numb_2 || 
         pair_in_numb_1 > pair_in_numb_2 && pair_in_numb_1 > pair_in_numb_3 || 
         pair_in_numb_2 > pair_in_numb_1 && pair_in_numb_2 > pair_in_numb_3 ||
@@ -259,6 +257,9 @@ const html_generieren_numbers_1p_4x4 = function () {
         pair_stats_3();
         
       }
+
+      
+      
       
       setTimeout(function () {
         check_pair();
