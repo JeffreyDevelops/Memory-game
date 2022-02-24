@@ -123,7 +123,7 @@ body {
 /* === DATA === */
 
 #data {
-    margin-top: 3rem;
+    margin-top: 15rem;
     display: flex;
     gap: 1rem;
     justify-content: center;
@@ -165,9 +165,8 @@ body {
 .moves span {
    font-size: 12px;
    font-weight: bold;
-   color: #7191A5;
    position: relative;
-    bottom: .8rem;
+   bottom: 0.1rem;
 }
 
 /* === Menu onClick === */
@@ -420,23 +419,14 @@ body {
     #data {
         margin-top: 0;
         display: flex;
-        gap: 4.5rem;
+        gap: 1.5rem;
         justify-content: center;
         
-    }
-
-    .time {
-        background-color: #F2F2F2;
-        padding: 1.5rem 3rem .6rem 3rem;
-        border-radius: .3rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
     }
     
     .moves {
         background-color: #F2F2F2;
-        padding: .5rem 3rem .5rem 3rem;
+        padding: 0.2rem 1.3rem 1.3rem 1.5rem;
         position: relative;
         border-radius: .3rem;
         display: flex;
@@ -452,6 +442,7 @@ body {
     .moves-header {
         position: relative;
         top: .4rem;
+        color: #7191A5;
     }
 
     .time-counter {
@@ -465,7 +456,23 @@ body {
         position: relative;
         top: .9rem;
         font-size: 20px!important;
-        color: #152938!important;
+        color: #152938;
+    }
+
+    .p1-mobile {
+        display: none;
+    }
+    
+    .p2-mobile {
+        display: none;
+    }
+    
+    .p3-mobile {
+        display: none;
+    }
+    
+    .p4-mobile {
+        display: none;
     }
 
 }
@@ -554,9 +561,9 @@ body {
 /* === DATA === */
 
 #data {
-    margin-top: 5rem;
+    margin-top: 80px;
     display: flex;
-    gap: 11.3rem;
+    gap: 1.3rem;
     justify-content: center;
     
 }
@@ -605,39 +612,67 @@ body {
 
 .moves {
     background-color: #F2F2F2;
-    width: 100px;
-    border-radius: 0.5rem;
+    padding: 0.2rem 5.3rem 1.3rem 1.5rem;
+    position: relative;
+    border-radius: 0.3rem;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 7.5rem;
-    justify-content: center;
+    flex-direction: column;
 }
 
 .moves-header {
     position: relative;
-    top: .1rem;
-    left: .3rem;
+    top: 0.4rem;
+    right: 1rem;
 }
 
 
 .moves-counter {
     position: relative;
-    top: 0;
+    top: 0.9rem;
     font-size: 20px!important;
-    color: #152938!important;
-    right: .2rem;
+    color: #152938;
+    right: 2rem;
 }
 
 .moves span {
    font-size: 12px;
    font-weight: bold;
-   color: #7191A5;
    position: none;
    bottom: 0;
    
 }
 
+.p1-mobile {
+    display: inline-block;
+}
+
+.p2-mobile {
+    display: inline-block;
+}
+
+.p3-mobile {
+    display: inline-block;
+}
+
+.p4-mobile {
+    display: inline-block;
+}
+
+.p1-desktop {
+    display: none;
+}
+
+.p2-desktop {
+    display: none;
+}
+
+.p3-desktop {
+    display: none;
+}
+
+.p4-desktop {
+    display: none;
+}
 /* === finish screen === */
 
 #finish-outside {
@@ -790,6 +825,27 @@ body {
 
 }
 
+@media (min-width: 1440px) {
+    .moves {
+        padding: 0.2rem 5.3rem 1.3rem 1.5rem;
+        position: relative;
+        border-radius: 0.3rem;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .moves-header {
+        top: 0.7rem;
+        right: 1rem;
+    }
+
+    .moves-counter {
+        left: 4.5rem;
+        top: 0.7rem;
+    }
+}
+
+
 @media (min-width: 1920px) {
 
     .flipCard {
@@ -825,74 +881,5 @@ body {
     }
 
     
-    /* === DATA === */
-    
-    .time {
-        background-color: #F2F2F2;
-        width: 100px;
-        padding-top: 1.2rem;
-        padding-bottom: 1.2rem;
-        border-radius: .5rem;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .time span {
-        font-size: 12px;
-        font-weight: bold;
-        color: #7191A5;
-        position: none;
-        bottom: 0;
-        right: 0.4rem;
-     }
-
-    .time-header {
-        left: .5rem;
-    }
-    
-    .time-counter {
-        position: relative;
-        top: 0;
-        font-size: 20px!important;
-        color: #152938!important;
-        right: .2rem;
-    }
-
-    .bigger {
-        position: relative;
-        top: 0;
-        right: .2rem!important;
-        font-size: 22px!important;
-        color: #152938!important;
-    }
-    
-    .moves {
-        background-color: #F2F2F2;
-        width: 100px;
-        border-radius: 0.5rem;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 7.5rem;
-        justify-content: center;
-    }
-
-    .moves-counter {
-        position: relative;
-        top: 0;
-        font-size: 20px!important;
-        color: #152938!important;
-        right: .2rem;
-    }
-    
-    .moves span {
-       font-size: 12px;
-       font-weight: bold;
-       color: #7191A5;
-       position: none;
-        bottom: 0;
-       
-    }
 }
 
