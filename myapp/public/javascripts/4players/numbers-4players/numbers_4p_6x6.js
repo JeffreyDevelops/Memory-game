@@ -153,8 +153,8 @@ const html_generieren_numbers_1p_4x4 = function () {
     let target_order = document.querySelector("#finish-stats");
     let pair_4 = document.createElement("div");
     pair_4.setAttribute("id", "finish-moves");
-    pair_4.setAttribute("class", "p3-moves");
-    pair_4.innerHTML = `<span>Player 3</span>
+    pair_4.setAttribute("class", "p4-moves");
+    pair_4.innerHTML = `<span>Player 4</span>
     <span></span>`;
     target_order.insertAdjacentElement("afterbegin", pair_4);
   }
@@ -191,7 +191,7 @@ const html_generieren_numbers_1p_4x4 = function () {
 
         p3_pair.innerText = `${get_pair_3} Pairs`;
 
-        p4_pair.innerText = `${get_pair_3} Pairs`;
+        p4_pair.innerText = `${get_pair_4} Pairs`;
         
 
         let pair_in_numb_1 = parseFloat(get_pair_1);
@@ -388,57 +388,76 @@ const html_generieren_numbers_1p_4x4 = function () {
         pair_stats_2();
         pair_stats_1();
         }
-      if (gethighest_numb === pair_in_numb_1 && gethighest_numb === pair_in_numb_2 || 
-        pair_in_numb_1 > pair_in_numb_2 && pair_in_numb_1 > pair_in_numb_3 || 
-        pair_in_numb_2 > pair_in_numb_1 && pair_in_numb_2 > pair_in_numb_3 ||
-        pair_in_numb_3 > pair_in_numb_2 && pair_in_numb_3 > pair_in_numb_1 ||
+      if (gethighest_numb === pair_in_numb_1 && gethighest_numb === pair_in_numb_2 && 
+        gethighest_numb !== pair_in_numb_4 && gethighest_numb !== pair_in_numb_3 || 
+        pair_in_numb_1 > pair_in_numb_2 && pair_in_numb_1 > pair_in_numb_3 && pair_in_numb_1 > pair_in_numb_4|| 
+        pair_in_numb_2 > pair_in_numb_1 && pair_in_numb_2 > pair_in_numb_3 && pair_in_numb_2 > pair_in_numb_4||
+        pair_in_numb_3 > pair_in_numb_2 && pair_in_numb_3 > pair_in_numb_1 && pair_in_numb_3 > pair_in_numb_4||
         pair_in_numb_4 > pair_in_numb_1 && pair_in_numb_4 > pair_in_numb_2 
         && pair_in_numb_4 > pair_in_numb_3) {
-        pair_in_numb_4();
+        pair_stats_4();
         pair_stats_3();
         pair_stats_2();
         pair_stats_1();
-      } else if (gethighest_numb === pair_in_numb_1 && gethighest_numb === pair_in_numb_3) {
+      } 
+      if (gethighest_numb === pair_in_numb_1 && gethighest_numb === pair_in_numb_3 
+        && gethighest_numb !== pair_in_numb_2 && gethighest_numb !== pair_in_numb_4) {
         pair_stats_4();
         pair_stats_2();
         pair_stats_1();
         pair_stats_3();
-      } else if(gethighest_numb === pair_in_numb_2 && gethighest_numb === pair_in_numb_3) {
+      } 
+       if(gethighest_numb === pair_in_numb_2 && gethighest_numb === pair_in_numb_3
+        && gethighest_numb !== pair_in_numb_1 && gethighest_numb !== pair_in_numb_4) {
         pair_stats_4();
         pair_stats_1();
         pair_stats_2();
         pair_stats_3();
-      } else if (gethighest_numb === pair_in_numb_1 && gethighest_numb === pair_in_numb_4) {
+      } 
+       if (gethighest_numb === pair_in_numb_1 && gethighest_numb === pair_in_numb_4
+        && gethighest_numb !== pair_in_numb_2 && gethighest_numb !== pair_in_numb_3) {
         pair_stats_2();
         pair_stats_3();
         pair_stats_4();
         pair_stats_1();
-      } else if (gethighest_numb === pair_in_numb_2 && gethighest_numb === pair_in_numb_4) {
+      } 
+       if (gethighest_numb === pair_in_numb_2 && gethighest_numb === pair_in_numb_4
+        && gethighest_numb !== pair_in_numb_1 && gethighest_numb !== pair_in_numb_3) {
         pair_stats_1();
         pair_stats_3();
         pair_stats_2();
         pair_stats_4();
-      } else if (gethighest_numb === pair_in_numb_3 && gethighest_numb === pair_in_numb_4) {
+        }
+       if (gethighest_numb === pair_in_numb_3 && gethighest_numb === pair_in_numb_4
+        && gethighest_numb !== pair_in_numb_1 && gethighest_numb !== pair_in_numb_2) {
         pair_stats_1();
         pair_stats_2();
         pair_stats_3();
         pair_stats_4();
-      } else if (gethighest_numb === pair_in_numb_2 && gethighest_numb === pair_in_numb_3 && gethighest_numb === pair_in_numb_4) {
-        pair_stats_1();
-        pair_stats_2();
-        pair_stats_3();
-        pair_stats_4();
-      } else if (gethighest_numb === pair_in_numb_1 && gethighest_numb === pair_in_numb_2 && gethighest_numb === pair_in_numb_4) {
-        pair_stats_3();
-        pair_stats_1();
-        pair_stats_2();
-        pair_stats_4();
-      } else if (gethighest_numb === pair_in_numb_3 && gethighest_numb === pair_in_numb_1 && gethighest_numb === pair_in_numb_4) {
+      }
+       if (gethighest_numb === pair_in_numb_1 && gethighest_numb === pair_in_numb_2 && gethighest_numb === pair_in_numb_4 &&
+        gethighest_numb !== pair_in_numb_3) {
+         pair_stats_3();
+         pair_stats_1();
+         pair_stats_2();
+         pair_stats_4();
+       }
+      if (gethighest_numb === pair_in_numb_3 && gethighest_numb === pair_in_numb_1 && gethighest_numb === pair_in_numb_4 &&
+        gethighest_numb !== pair_in_numb_2) {
+         pair_stats_2();
+         pair_stats_1();
+         pair_stats_3();
+         pair_stats_4();
+       }
+
+       if (gethighest_numb === pair_in_numb_3 && gethighest_numb === pair_in_numb_2 && gethighest_numb === pair_in_numb_4 &&
+        gethighest_numb !== pair_in_numb_1) {
         pair_stats_2();
         pair_stats_1();
         pair_stats_3();
         pair_stats_4();
       }
+        
       setTimeout(function () {
         check_pair();
       }, 200);
