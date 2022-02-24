@@ -137,6 +137,7 @@ const check_pair = function () {
       const get_pair_1 = document.querySelector("#p1 .moves-counter").innerHTML;
       const get_pair_2 = document.querySelector("#p2 .moves-counter").innerHTML;
       const get_pair_3 = document.querySelector("#p3 .moves-counter").innerHTML;
+      let target_order = document.querySelector("#finish-stats");
       
       p1_pair.innerText = `${get_pair_1} Pairs`;
       
@@ -191,6 +192,8 @@ const check_pair = function () {
         p3_pair_header_3.style.setProperty("color", "#FFF", "important");
       }  
       if (gethighest_numb === pair_in_numb_1 && gethighest_numb === pair_in_numb_2) {
+        target_order.insertAdjacentElement("afterbegin", p1_pair);
+        target_order.insertAdjacentElement("afterbegin", p2_pair);
         winner_target.innerText = `It's a tie!`
         p1_pair_winner.innerText = `Player 1 ` + "{Winner!}"
         winner_pair_bg_1.style.backgroundColor = "#152938";
@@ -203,6 +206,8 @@ const check_pair = function () {
         p2_pair_header_2.style.setProperty("color", "#FFF", "important");
       }
       if (gethighest_numb === pair_in_numb_1 && gethighest_numb === pair_in_numb_3) {
+        target_order.insertAdjacentElement("afterbegin", p1_pair);
+        target_order.insertAdjacentElement("afterbegin", p3_pair);
         winner_target.innerText = `It's a tie!`
         p1_pair_winner.innerText = `Player 1 ` + "{Winner!}"
         winner_pair_bg_1.style.backgroundColor = "#152938";
@@ -214,6 +219,8 @@ const check_pair = function () {
         p3_pair_header_3.style.setProperty("color", "#FFF", "important");
       }
       if (gethighest_numb === pair_in_numb_2 && gethighest_numb === pair_in_numb_3) {
+        target_order.insertAdjacentElement("afterbegin", p2_pair);
+        target_order.insertAdjacentElement("afterbegin", p3_pair);
         winner_target.innerText = `It's a tie!`
         p2_pair_winner.innerText = `Player 2 ` + "{Winner!}"
         winner_pair_bg_2.style.backgroundColor = "#152938";
@@ -223,6 +230,7 @@ const check_pair = function () {
         winner_pair_bg_3.style.backgroundColor = "#152938";
         p3_pair.style.setProperty("color", "#FFF", "important");
         p3_pair_header_3.style.setProperty("color", "#FFF", "important");
+        
       } 
 }
 
